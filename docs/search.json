@@ -410,6 +410,62 @@
     "href": "index.html#diferenças-principais-entre-listas-e-series-do-pandas",
     "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
     "section": "Diferenças principais entre listas e series do Pandas",
-    "text": "Diferenças principais entre listas e series do Pandas\nÍndice rotulado (não apenas posicional)\n\nimport pandas as pd\n\ns = pd.Series([10, 20, 30], index=['a', 'b', 'c'])\ns['b']  # 20  → listas não fazem isso\n\nnp.int64(20)\n\n\nOperações são vetorizadas (rápidas, em C/NumPy):\n::: {#cell-series*2 .cell execution_count=18}\ns * 2          # multiplica todos os elementos\n\na    20\nb    40\nc    60\ndtype: int64\n\n:::\n::: {#cell-series bool .cell execution_count=19}\ns[s &gt; 15]      # filtro booleano\n\nb    20\nc    30\ndtype: int64\n\n:::\nEm Python tradicional, utilizando lista ao invés de serie, para assim:\n::: {#cell-numeros*2 .cell execution_count=20}\nnumeros = [10, 20, 30]\n\nnumeros * 2 #  repetição, não multiplicação!\n\n[10, 20, 30, 10, 20, 30]\n\n:::\n\nresultado = []\nfor numero in numeros:\n  resultado.append(numero * 2)\n\nprint(resultado)\n\n[20, 40, 60]\n\n\n\n# opção 2, com função lambda \nlist(map(lambda x: x * 2, numeros))\n\n[20, 40, 60]\n\n\nAlinhamento automático em operações\n\ns1 = pd.Series([1,2,3], index=['a','b','c'])\ns2 = pd.Series([10,20,30], index=['b','c','d'])\ns1 + s2   # alinha pelos índices, gera NaN onde não há correspondência\n\na     NaN\nb    12.0\nc    23.0\nd     NaN\ndtype: float64"
+    "text": "Diferenças principais entre listas e series do Pandas\nÍndice rotulado (não apenas posicional)\n\nimport pandas as pd\n\ns = pd.Series([10, 20, 30], index=['a', 'b', 'c'])\ns['b']  # 20  → listas não fazem isso\n\nnp.int64(20)\n\n\nOperações são vetorizadas (rápidas, em C/NumPy):\n\ns * 2          # multiplica todos os elementos\n\na    20\nb    40\nc    60\ndtype: int64\n\n\n\ns[s &gt; 15]      # filtro booleano\n\nb    20\nc    30\ndtype: int64\n\n\nEm Python tradicional, utilizando lista ao invés de serie, para assim:\n\nnumeros = [10, 20, 30]\n\n#  repetição, não multiplicação!\nnumeros * 2 \n\n[10, 20, 30, 10, 20, 30]\n\n\n\nresultado = []\nfor numero in numeros:\n  resultado.append(numero * 2)\n\nprint(resultado)\n\n[20, 40, 60]\n\n\n\n# opção 2, com função lambda \nlist(map(lambda x: x * 2, numeros))\n\n[20, 40, 60]\n\n\nAlinhamento automático em operações\n\ns1 = pd.Series([1,2,3], index=['a','b','c'])\ns2 = pd.Series([10,20,30], index=['b','c','d'])\ns1 + s2   # alinha pelos índices, gera NaN onde não há correspondência\n\na     NaN\nb    12.0\nc    23.0\nd     NaN\ndtype: float64"
+  },
+  {
+    "objectID": "index.html#config-no-google-drive",
+    "href": "index.html#config-no-google-drive",
+    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "section": "1) Config no google drive",
+    "text": "1) Config no google drive\n\nAcesse drive.google.com e faça login.\nClique no ícone de engrenagem ⚙️ no canto superior direito e selecione “Configurações”.\nNa página de configurações, encontre a opção “Converter uploads para o formato dos editores de arquivos do Google” (ou “Converter arquivos carregados para o formato do Google Docs”).\nDesmarque esta opção.\n\n\nnao converter arquivoClique em “Concluir” para salvar."
+  },
+  {
+    "objectID": "index.html#criar-um-novo-diretóriopastaficheiro",
+    "href": "index.html#criar-um-novo-diretóriopastaficheiro",
+    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "section": "2) Criar um novo diretório/pasta/ficheiro",
+    "text": "2) Criar um novo diretório/pasta/ficheiro\nNo Google Drive, você pode criar pastas e arquivos de duas formas:\nPela interface web:\n\nAcesse drive.google.com\nClique em “+ Novo” → “Pasta” (ou “Nova pasta”) para criar um diretório\nPara criar um arquivo, clique em “+ Novo” → escolha o tipo (Documentos, Planilhas, etc.)"
+  },
+  {
+    "objectID": "index.html#subir-arquivo-upload-no-google-drive",
+    "href": "index.html#subir-arquivo-upload-no-google-drive",
+    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "section": "3) Subir arquivo (upload) no Google Drive",
+    "text": "3) Subir arquivo (upload) no Google Drive"
+  },
+  {
+    "objectID": "index.html#conectando-drive-ao-colab",
+    "href": "index.html#conectando-drive-ao-colab",
+    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "section": "4) conectando Drive ao Colab",
+    "text": "4) conectando Drive ao Colab\n\nfrom google.colab import drive\n# em qual pasta ele vai montar o drive:\ndrive.mount('/content/drive')\n\nRode a célula acima.\nAbrirá uma janela perguntando se você permite o acesso:\n\n\n\ncolab drive\n\n\n\nClique em “Conectar ao Google Drive” (ou “Permitir”).\nOutra janela se abrirá. Escolha a conta Google desejada\nRevise as permissões e clique em “Permitir”\n\n\n\n\nacesso 2"
+  },
+  {
+    "objectID": "index.html#verificando-o-acesso",
+    "href": "index.html#verificando-o-acesso",
+    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "section": "Verificando o acesso",
+    "text": "Verificando o acesso\n\n# Listar o conteúdo do Drive\n!ls /content/drive/MyDrive"
+  },
+  {
+    "objectID": "index.html#observações-importantes",
+    "href": "index.html#observações-importantes",
+    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "section": "Observações importantes:",
+    "text": "Observações importantes:\n\nA conexão é temporária: sempre que reiniciar o ambiente do Colab, será necessário montar o Drive novamente.\nO Google Drive tem cota de armazenamento (15 GB gratuitos, compartilhados com Gmail e Fotos).\nDesmonte o Drive após o uso: quando terminar de usar, você pode desconectar manualmente o Drive para interromper o acesso. Ou simplesmente encerre a sessão do Colab, e a montagem será invalidada automaticamente."
+  },
+  {
+    "objectID": "index.html#filtragem-com-query",
+    "href": "index.html#filtragem-com-query",
+    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "section": "Filtragem com query",
+    "text": "Filtragem com query\n\n# só as linhas com preco &gt; 70\ndf_frutas.query('preco &gt; 70')\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100\n\n\n\n\n\n\n\n\n# só as linhas com preco &gt; 70\ndf_frutas.loc[(df_frutas['preco'] &gt; 70) & (df_frutas['quantidade'] &gt; 15)]\ndf_frutas.query('preco &gt; 70 and quantidade &gt; 15')\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100"
+  },
+  {
+    "objectID": "index.html#where",
+    "href": "index.html#where",
+    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "section": "where",
+    "text": "where\nO where() é um método que mantém os valores onde a condição é True e substitui onde é False (por padrão, por NaN). É o “filtro que preserva a forma” — diferente do query/loc, que remove linhas. Where preserva o número de linhas.\n\n# mantém condição; senão -&gt; NaN\ndf_frutas['preco'].where(df_frutas['preco'] &gt; 50)\n\n0     80.0\n1    100.0\n2      NaN\n3     70.0\nName: preco, dtype: float64\n\n\n\n\n\n\n\n\nDica\n\n\nquery recebe uma string de expressão — leitura mais próxima da linguagem natural."
   }
 ]
