@@ -2,70 +2,70 @@
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "",
     "text": "Curso de especialização em:\n\n\n\nCiências Sociais de Dados: Aplicações de Métodos Quantitativos à Análise Social e à Avaliação de Políticas Públicas\n\n\nMódulo: 04 – Introdução à Análise de Dados com Python\n Docente: Prof. Dr. Alisson Soares\nAula por: Alisson Soares"
   },
   {
     "objectID": "index.html#a-ideia",
     "href": "index.html#a-ideia",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "A ideia",
     "text": "A ideia\n\nMethod chaining (encadeamento de métodos) é chamar vários métodos em sequência sobre o mesmo objeto, numa única expressão: o resultado de cada método vira o objeto sobre o qual o método seguinte opera. (Adaptado de Method Chaining in Python, GeeksforGeeks, 2025.)\n\nNão é exclusividade do pandas — funciona com strings, listas e qualquer método que devolva um objeto:\n\ntext = \" Olá, gfg! \"\nresult = text.strip().capitalize().replace(\"gfg\", \"Mundo!\")\nprint(result)\n\nOlá, Mundo!!\n\n\n\nstrip() remove espaços das pontas; capitalize() deixa a inicial maiúscula; replace() troca “gfg”."
   },
   {
     "objectID": "index.html#como-funciona",
     "href": "index.html#como-funciona",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Como funciona",
     "text": "Como funciona\nCada método da cadeia precisa devolver um objeto: métodos que devolvem None (como list.sort()) quebram a cadeia.\n\n# passo a passo:\nresult = obj.method1()\nresult = result.method2()\nresult = result.method3()\n\nequivale a:\n\nresult = obj.method1().method2().method3()"
   },
   {
     "objectID": "index.html#cuidados",
     "href": "index.html#cuidados",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Cuidados",
     "text": "Cuidados\n\nCadeias curtas: código mais limpo, sem variáveis temporárias.\nCadeias longas: erros podem ocorrer “no meio” da cadeia e são mais difíceis de localizar — separar em passos pode melhorar a legibilidade.\n\n\n\n\n\n\n\nDica\n\n\nNo pandas, quase todo método devolve um Series/DataFrame novo — é isso que torna o encadeamento tão natural lá. Voltamos ao tema na Parte 6, com assign, callables e pipe."
   },
   {
     "objectID": "index.html#o-que-é-o-pandas",
     "href": "index.html#o-que-é-o-pandas",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "O que é o pandas?",
     "text": "O que é o pandas?\n-Os dados tabulares são o coração da Ciência Social de Dados. - Planilhas (Excel/Sheets), CSV da PNAD/IBGE, tabelas de bases administrativas…\n\n“O pandas será uma ferramenta principal de interesse em boa parte do restante do livro. Ele contém estruturas de dados e ferramentas para manipulação de dados, projetadas para agilizar e facilitar a limpeza e a análise de dados em Python.” (McKinney, 2017, p. 185)"
   },
   {
     "objectID": "index.html#por-que-o-pandas-resolve-o-problema",
     "href": "index.html#por-que-o-pandas-resolve-o-problema",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Por que o pandas resolve o problema?",
     "text": "Por que o pandas resolve o problema?\n\n“… a principal diferença é que o pandas foi projetado para trabalhar com dados tabulares e heterogêneos. O NumPy, em comparação, é mais apropriado para trabalhar com dados numéricos homogêneos em arrays.” (McKinney, 2017, p. 185)\n\n\nNumPy: rápido, mas assume números de um tipo só (matrizes).\npandas: colunas com tipos diferentes (texto, número, data…) numa mesma tabela."
   },
   {
     "objectID": "index.html#o-nome-pandas",
     "href": "index.html#o-nome-pandas",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "O nome “pandas”",
     "text": "O nome “pandas”\n\n“O próprio nome pandas é derivado de panel data (dados em painel), um termo de econometria para conjuntos de dados multidimensionais estruturados, e uma brincadeira com a própria expressão Python data analysis.” (McKinney, 2017, p. 30)"
   },
   {
     "objectID": "index.html#instalação-e-importação",
     "href": "index.html#instalação-e-importação",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Instalação e importação",
     "text": "Instalação e importação\n\nimport pandas as pd\n\nprint(pd.__version__)\n\n2.3.3\n\n\n\n\n\n\n\n\nDica\n\n\nNo Google Colab o pandas já vem instalado.\nEm ambiente local, para instalá-lo: pip install pandas"
   },
   {
     "objectID": "index.html#lendo-dados-de-arquivos",
     "href": "index.html#lendo-dados-de-arquivos",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Lendo dados de arquivos",
     "text": "Lendo dados de arquivos\nO pandas lê dados de diferentes formatos: CSV, Excel, JSON, HTML, SQL…\n\npd.read_csv('xyz.csv')                # arquivo CSV\npd.read_excel('xyz.xlsx', sheet_name='Sheet1')  # planilha Excel\npd.read_json('xyz.json')              # JSON (APIs!)\npd.read_html('xyz.html')              # tabelas de páginas web\npd.read_sql('SELECT * FROM t', conn)  # banco de dados"
   },
   {
     "objectID": "index.html#escrevendo-dados",
     "href": "index.html#escrevendo-dados",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Escrevendo dados",
     "text": "Escrevendo dados\nFeitas as alterações nos dados, para salvá-los alterados, use:\n\ndf.to_csv('xyz.csv')                      # salva DataFrame como CSV\ndf.to_excel('xyz.xlsx', sheet_name='Sheet1')\ndf.to_json('xyz.json')\n\n\n\n\n\n\n\nAviso\n\n\nO read_csv/read_excel retorna um novo DataFrame em memória: alterar df depois não muda o arquivo em disco."
   },
@@ -79,84 +79,84 @@
   {
     "objectID": "index.html#series",
     "href": "index.html#series",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Series",
     "text": "Series\n\n“Uma Series é um objeto do tipo array unidimensional contendo uma sequência de valores (de tipos semelhantes aos tipos do NumPy) e um array associado de rótulos (labels) de dados, chamado de índice.” (McKinney, 2017, p. 186)\n\n\nobj = pd.Series([4, 7, -5, 3])\nprint(obj)\n\n0    4\n1    7\n2   -5\n3    3\ndtype: int64\n\n\n\nColuna 1: o índice (0, 1, 2…); coluna 2: os valores."
   },
   {
     "objectID": "index.html#series-com-rótulos",
     "href": "index.html#series-com-rótulos",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Series com rótulos",
     "text": "Series com rótulos\n\nobj2 = pd.Series([4, 7, -5, 3], index=['d', 'b', 'a', 'c'])\nobj2\n\nd    4\nb    7\na   -5\nc    3\ndtype: int64\n\n\n\nobj2['a']  # acesso pelo rótulo\n\nnp.int64(-5)"
   },
   {
     "objectID": "index.html#series-a-partir-de-dicionário",
     "href": "index.html#series-a-partir-de-dicionário",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Series a partir de dicionário",
     "text": "Series a partir de dicionário\n\nsdata = {'Recife': 1_657_878, 'Olinda': 414_735,\n         'Caruaru': 365_212, 'Mossoró': 300_618}\n\npd.Series(sdata)\n\nRecife     1657878\nOlinda      414735\nCaruaru     365212\nMossoró     300618\ndtype: int64"
   },
   {
     "objectID": "index.html#dataframe",
     "href": "index.html#dataframe",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "DataFrame",
     "text": "DataFrame\n\n“Um DataFrame representa uma tabela de dados retangular e contém uma coleção ordenada de colunas, em que cada uma pode ter um tipo de valor diferente (numérico, string, booleano etc.). O DataFrame tem índice tanto para linha quanto para coluna; pode ser imaginado como um dicionário de Series, todos compartilhando o mesmo índice.” (McKinney, 2017, p. 192)"
   },
   {
     "objectID": "index.html#criando-um-dataframe",
     "href": "index.html#criando-um-dataframe",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Criando um DataFrame",
     "text": "Criando um DataFrame\n\npd.DataFrame({'Sim': [30, 25], 'Não': [31, 2]})\n\n\n\n\n\n\n\n\nSim\nNão\n\n\n\n\n0\n30\n31\n\n\n1\n25\n2\n\n\n\n\n\n\n\n\ndados = {'frutas': ['Manga', 'Maçã', 'Banana', 'Laranja'],\n         'quantidade': [40, 20, 25, 10],\n         'preco': [80, 100, 50, 70]}\ntype(dados)\n\ndict\n\n\n\n# convertendo de dicionário para dataframe\ndf_frutas = pd.DataFrame(dados)\nprint(df_frutas)\n\n    frutas  quantidade  preco\n0    Manga          40     80\n1     Maçã          20    100\n2   Banana          25     50\n3  Laranja          10     70\n\n\n\ndisplay(df_frutas)\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100\n\n\n2\nBanana\n25\n50\n\n\n3\nLaranja\n10\n70\n\n\n\n\n\n\n\n\ntype(df_frutas)\n\npandas.core.frame.DataFrame"
   },
   {
     "objectID": "index.html#inspecionando-o-dataframe",
     "href": "index.html#inspecionando-o-dataframe",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Inspecionando o DataFrame",
     "text": "Inspecionando o DataFrame\n\ndf_frutas.columns    # nomes das colunas\n\nIndex(['frutas', 'quantidade', 'preco'], dtype='object')\n\n\n\ndf_frutas.shape      # (linhas, colunas)\n\n(4, 3)\n\n\n\ndf_frutas.dtypes     # tipos das colunas\n\nfrutas        object\nquantidade     int64\npreco          int64\ndtype: object\n\n\n\ndf_frutas.dtypes     # tipos das colunas\n\nfrutas        object\nquantidade     int64\npreco          int64\ndtype: object\n\n\n\ndf_frutas.values     # dados como array NumPy\n\narray([['Manga', 40, 80],\n       ['Maçã', 20, 100],\n       ['Banana', 25, 50],\n       ['Laranja', 10, 70]], dtype=object)\n\n\n\ndf_frutas.info()     # resumo completo: tipos + não-nulos\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 4 entries, 0 to 3\nData columns (total 3 columns):\n #   Column      Non-Null Count  Dtype \n---  ------      --------------  ----- \n 0   frutas      4 non-null      object\n 1   quantidade  4 non-null      int64 \n 2   preco       4 non-null      int64 \ndtypes: int64(2), object(1)\nmemory usage: 228.0+ bytes"
   },
   {
     "objectID": "index.html#primeiras-e-últimas-linhas",
     "href": "index.html#primeiras-e-últimas-linhas",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Primeiras e últimas linhas",
     "text": "Primeiras e últimas linhas\n\ndf.head()     # primeiras 5 linhas\ndf.tail()     # últimas 5 linhas\ndf.sample(3)  # 3 linhas aleatórias\n\n\n\n\n\n\n\nDica\n\n\nNa prática: head() é uma das primeiras coisas a rodar após qualquer read_csv."
   },
   {
     "objectID": "index.html#top-n-bottom-n-por-uma-coluna",
     "href": "index.html#top-n-bottom-n-por-uma-coluna",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Top-N / Bottom-N por uma coluna",
     "text": "Top-N / Bottom-N por uma coluna\n\ndf_frutas.nlargest(2, 'preco')    # 2 registros com preço mais alto\ndf_frutas.nsmallest(2, 'preco')   # 2 com preço mais baixo\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n2\nBanana\n25\n50\n\n\n3\nLaranja\n10\n70"
   },
   {
     "objectID": "index.html#seleção-de-colunas",
     "href": "index.html#seleção-de-colunas",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Seleção de colunas",
     "text": "Seleção de colunas\n\ndados = {'frutas': ['Manga', 'Maçã', 'Banana', 'Laranja'],\n         'quantidade': [40, 20, 25, 10],\n         'preco': [80, 100, 50, 70]}\ndf_frutas = pd.DataFrame(dados)\n\n\n\n0      Manga\n1       Maçã\n2     Banana\n3    Laranja\nName: frutas, dtype: object\n\n\n\n\n\n\n\n\n\n\n\nfrutas\npreco\n\n\n\n\n0\nManga\n80\n\n\n1\nMaçã\n100\n\n\n2\nBanana\n50\n\n\n3\nLaranja\n70"
   },
   {
     "objectID": "index.html#filtro-com-máscara-booleana",
     "href": "index.html#filtro-com-máscara-booleana",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Filtro com máscara booleana",
     "text": "Filtro com máscara booleana\n\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100\n\n\n3\nLaranja\n10\n70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfrutas\npreco\n\n\n\n\n0\nManga\n80\n\n\n1\nMaçã\n100\n\n\n3\nLaranja\n70"
   },
   {
     "objectID": "index.html#loc-seleção-por-rótulo",
     "href": "index.html#loc-seleção-por-rótulo",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "loc: seleção por rótulo",
     "text": "loc: seleção por rótulo\n\ndf_frutas.loc[0]                          # linha de índice 0\n\nfrutas        Manga\nquantidade       40\npreco            80\nName: 0, dtype: object\n\n\n\ndf_frutas.loc[:, 'frutas':'preco']        # fatia de colunas\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100\n\n\n2\nBanana\n25\n50\n\n\n3\nLaranja\n10\n70\n\n\n\n\n\n\n\n\n# filtro + colunas\ndf_frutas.loc[df_frutas['preco'] &lt; 70, ['frutas', 'preco']]  \n\n\n\n\n\n\n\n\nfrutas\npreco\n\n\n\n\n2\nBanana\n50"
   },
   {
     "objectID": "index.html#iloc-seleção-por-posição",
     "href": "index.html#iloc-seleção-por-posição",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "iloc: seleção por posição",
     "text": "iloc: seleção por posição\n\n# da posição 2 a 4 (fim exclusivo!)\ndf_frutas.iloc[2:5]        \n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n2\nBanana\n25\n50\n\n\n3\nLaranja\n10\n70\n\n\n\n\n\n\n\n\n# colunas de posição 0 e 2\ndf_frutas.iloc[:, [0, 2]]  \n\n\n\n\n\n\n\n\nfrutas\npreco\n\n\n\n\n0\nManga\n80\n\n\n1\nMaçã\n100\n\n\n2\nBanana\n50\n\n\n3\nLaranja\n70\n\n\n\n\n\n\n\n\n# valor único por rótulo\ndf_frutas.at[1, 'preco']   \n\nnp.int64(100)\n\n\n\n# valor único por posição\ndf_frutas.iat[1, 2]        \n\nnp.int64(100)\n\n\n\n\n\n\n\n\nAviso\n\n\nDiferença importante: com loc, o limite final é incluído (‘frutas’:‘preco’ inclui preco); com iloc (fatias), o limite final não é incluído."
   },
@@ -170,189 +170,189 @@
   {
     "objectID": "index.html#novas-colunas",
     "href": "index.html#novas-colunas",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Novas colunas",
     "text": "Novas colunas\n\n\n\n\n\n\n\n\n\nmunicipio\nuf\npop_2021\nidh_2010\n\n\n\n\n0\nRecife\nPE\n1 657 878\n0.755\n\n\n1\nOlinda\nPE\n414 735\n0.715\n\n\n2\nJaboatão\nPE\n721 739\n0.716\n\n\n3\nCaruaru\nPE\n365 212\n0.681\n\n\n4\nPetrolina\nPE\n356 762\n0.719\n\n\n5\nNatal\nRN\n899 578\n0.763\n\n\n6\nMossoró\nRN\n300 618\n0.709\n\n\n\n\n\n\n\n\ndf = df.assign(desc=lambda d: d['preco'] * 0.1)  # alternativa: método .assign()"
   },
   {
     "objectID": "index.html#tipos-e-conversões",
     "href": "index.html#tipos-e-conversões",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Tipos e conversões",
     "text": "Tipos e conversões\n\ndf['Quantity'].astype('float')  # converte para numérico decimal\ndf['frutas'].astype('str')      # converte para texto\ndf['preco'] = df['preco'].astype('int32')\n\n\n\n\n\n\n\nAviso\n\n\nastype('float') falha se houver texto não numérico na coluna. Para “forçar”, use pd.to_numeric(col, errors='coerce'), que transforma o que não converte em NaN."
   },
   {
     "objectID": "index.html#ordenando",
     "href": "index.html#ordenando",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Ordenando",
     "text": "Ordenando\n\ndf.sort_values('preco', ascending=True)      # menor para maior\ndf.sort_values('preco', ascending=False)     # maior para menor\ndf.sort_index(ascending=False)               # pelo índice"
   },
   {
     "objectID": "index.html#renomeando-e-descartando",
     "href": "index.html#renomeando-e-descartando",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Renomeando e descartando",
     "text": "Renomeando e descartando\n\ndf = df.rename(columns={'frutas': 'FRUITS'})  # renomear coluna\n\ndf.drop(columns=['Quantity'])  # descartar coluna\ndf.drop([1, 3])                # descartar linhas pelo índice\n\n\n\n\n\n\n\nNota\n\n\nPor padrão, esses métodos devolvem uma cópia. Para modificar o objeto original use inplace=True, ou (preferível hoje em dia) reatribua: df = df.rename(...)."
   },
   {
     "objectID": "index.html#reindexando",
     "href": "index.html#reindexando",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Reindexando",
     "text": "Reindexando\n\ndf_filtrado = df[df['preco'] &gt; 50]\ndf_filtrado.reset_index(drop=True)  # índice volta a ser 0,1,2..."
   },
   {
     "objectID": "index.html#tablereshaping-melt-e-pivot",
     "href": "index.html#tablereshaping-melt-e-pivot",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Table/reshaping: melt e pivot",
     "text": "Table/reshaping: melt e pivot\n\npd.melt(df)  # desmancha colunas em pares (variável, valor): formato \"longo\"\n\npivot = df.pivot(columns='frutas', values=['preco', 'Quantity'])  # tabela dinâmica"
   },
   {
     "objectID": "index.html#method-chaining-o-problema-das-variáveis-temporárias",
     "href": "index.html#method-chaining-o-problema-das-variáveis-temporárias",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Method chaining: o problema das variáveis temporárias",
     "text": "Method chaining: o problema das variáveis temporárias\nNa abertura da aula vimos o encadeamento com strings; aqui, o mesmo princípio num caso real do pandas. Ao aplicar uma sequência de transformações, é comum criar variáveis temporárias que só servem para o passo seguinte (McKinney, 2017, p. 508):\n\ndf = load_data()\ndf2 = df[df['col2'] &lt; 0]\ndf2['col1_demeaned'] = df2['col1'] - df2['col1'].mean()\nresult = df2.groupby('key').col1_demeaned.std()\n\n\nO assign() é a alternativa funcional: em vez de modificar o objeto in-place, devolve um DataFrame novo — por isso “encaixa” numa cadeia de métodos (p. 509):\ndf2['k'] = v (in-place) equivale a df2 = df.assign(k=v) (funcional)."
   },
   {
     "objectID": "index.html#method-chaining-callables-lambda-dentro-da-cadeia",
     "href": "index.html#method-chaining-callables-lambda-dentro-da-cadeia",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Method chaining: callables (lambda) dentro da cadeia",
     "text": "Method chaining: callables (lambda) dentro da cadeia\nassign, [] e vários métodos do pandas aceitam funções (callables), que recebem o objeto da etapa anterior da cadeia (pp. 509–510):\n\nimport pandas as pd\ndfc = pd.DataFrame({'key':  ['a', 'a', 'b', 'b', 'c'],\n                    'col1': [2, 4, -3, 5, 10],\n                    'col2': [-1, -2, -5, -8, 1]})\ndfc\n\n\n\n\n\n\n\n\nkey\ncol1\ncol2\n\n\n\n\n0\na\n2\n-1\n\n\n1\na\n4\n-2\n\n\n2\nb\n-3\n-5\n\n\n3\nb\n5\n-8\n\n\n4\nc\n10\n1\n\n\n\n\n\n\n\n\n# toda a sequência como uma única expressão encadeada:\nresult = (dfc\n          [lambda x: x['col2'] &lt; 0]                                    # filtra linhas\n          .assign(col1_demeaned=lambda x: x['col1'] - x['col1'].mean())\n          .groupby('key')['col1_demeaned'].std())                      # desvio-padrão por grupo\nresult\n\nkey\na    1.414214\nb    5.656854\nName: col1_demeaned, dtype: float64\n\n\n\n\n\n\n\n\nNota\n\n\nOs parênteses externos permitem quebras de linha dentro da expressão. O McKinney lembra (2017, p. 510): escrever em cadeia ou separar em passos é gosto pessoal — separar pode deixar o código mais legível."
   },
   {
     "objectID": "index.html#method-chaining-pipe",
     "href": "index.html#method-chaining-pipe",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Method chaining: pipe",
     "text": "Method chaining: pipe\nPara incluir suas próprias funções (ou de bibliotecas de terceiros) na cadeia — funções que recebem e devolvem Series/DataFrame — use pipe() (pp. 511–512):\n\ndef group_demean(dframe, by, cols):\n    \"\"\"Subtrai a média do grupo de cada coluna em cols.\"\"\"\n    result = dframe.copy()\n    g = dframe.groupby(by)\n    for c in cols:\n        result[c] = dframe[c] - g[c].transform('mean')\n    return result\n\nresult = (dfc[dfc['col1'] &gt; 0]\n          .pipe(group_demean, ['key'], ['col1']))\nresult\n\n\n\n\n\n\n\n\nkey\ncol1\ncol2\n\n\n\n\n0\na\n-1.0\n-1\n\n\n1\na\n1.0\n-2\n\n\n3\nb\n0.0\n-8\n\n\n4\nc\n0.0\n1"
   },
   {
     "objectID": "index.html#merge-junções-estilo-banco-de-dados",
     "href": "index.html#merge-junções-estilo-banco-de-dados",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Merge (junções estilo banco de dados)",
     "text": "Merge (junções estilo banco de dados)\n\npd.merge(df1, df2, how='left',  on='frutas')\npd.merge(df1, df2, how='right', on='frutas')\npd.merge(df1, df2, how='inner', on='frutas')\npd.merge(df1, df2, how='outer', on='frutas')\n\n\n\n\n\n\n\nNota\n\n\nhow= controla quais linhas ficam: - left: todas as linhas de df1; - right: todas de df2; - inner: apenas chaves presentes nos dois; - outer: todas as chaves de qualquer um."
   },
   {
     "objectID": "index.html#concatenando",
     "href": "index.html#concatenando",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Concatenando",
     "text": "Concatenando\n\npd.concat([df, df1], axis=0, ignore_index=True)  # empilha linhas\npd.concat([df, df2], axis=1)                     # acrescenta colunas"
   },
   {
     "objectID": "index.html#resumo-com-describe",
     "href": "index.html#resumo-com-describe",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Resumo com describe",
     "text": "Resumo com describe\n\ndf_frutas.describe()\n\n\n\n\n\n\n\n\nquantidade\npreco\npreco_pago\n\n\n\n\ncount\n4.00\n4.00000\n4.00000\n\n\nmean\n23.75\n75.00000\n1787.50000\n\n\nstd\n12.50\n20.81666\n1081.95425\n\n\nmin\n10.00\n50.00000\n700.00000\n\n\n25%\n17.50\n65.00000\n1112.50000\n\n\n50%\n22.50\n75.00000\n1625.00000\n\n\n75%\n28.75\n85.00000\n2300.00000\n\n\nmax\n40.00\n100.00000\n3200.00000\n\n\n\n\n\n\n\n\ndf_frutas.describe(include=['O'])   # estatísticas das colunas de texto (objects)\n\n\n\n\n\n\n\n\nfrutas\n\n\n\n\ncount\n4\n\n\nunique\n4\n\n\ntop\nManga\n\n\nfreq\n1"
   },
   {
     "objectID": "index.html#estatísticas-por-coluna",
     "href": "index.html#estatísticas-por-coluna",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Estatísticas por coluna",
     "text": "Estatísticas por coluna\n\ndf_frutas['preco'].sum()  # soma\ndf_frutas['preco'].mean()  # média\ndf_frutas['preco'].median()  # mediana\ndf_frutas['preco'].var()  # variância\ndf_frutas['preco'].std()  # desvio-padrão / standard deviation\ndf_frutas['preco'].quantile([0.25, 0.75])  # quartis\n\n0.25    65.0\n0.75    85.0\nName: preco, dtype: float64\n\n\n\ndf_frutas['preco'].cumsum()  # soma acumulada\n\n0     80\n1    180\n2    230\n3    300\nName: preco, dtype: int64"
   },
   {
     "objectID": "index.html#valores-únicos-e-frequências",
     "href": "index.html#valores-únicos-e-frequências",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Valores únicos e frequências",
     "text": "Valores únicos e frequências\n\ndf_frutas['frutas'].unique()        # lista de valores distintos\ndf_frutas['frutas'].value_counts()  # contagem de cada valor\n\nfrutas\nManga      1\nMaçã       1\nBanana     1\nLaranja    1\nName: count, dtype: int64"
   },
   {
     "objectID": "index.html#correlação-e-covariância",
     "href": "index.html#correlação-e-covariância",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Correlação e covariância",
     "text": "Correlação e covariância\n\ndf_frutas.corr(numeric_only=True)\ndf_frutas.cov(numeric_only=True)\n\n\n\n\n\n\n\n\nquantidade\npreco\npreco_pago\n\n\n\n\nquantidade\n156.250000\n8.333333\n1.214583e+04\n\n\npreco\n8.333333\n433.333333\n1.041667e+04\n\n\npreco_pago\n12145.833333\n10416.666667\n1.170625e+06"
   },
   {
     "objectID": "index.html#detectando",
     "href": "index.html#detectando",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Detectando",
     "text": "Detectando\n\ndf.isnull()          # True onde está faltando\ndf.isnull().sum()    # contagem de faltantes por coluna"
   },
   {
     "objectID": "index.html#tratando-fillna-e-dropna",
     "href": "index.html#tratando-fillna-e-dropna",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Tratando: fillna e dropna",
     "text": "Tratando: fillna e dropna\n\ndf_com_nulo = df.copy()\ndf_com_nulo.loc[0, 'Price'] = pd.NA        # simula um valor ausente\ndf_com_nulo['Price'].isnull().sum()        # 1 valor ausente\n\nnp.int64(7)\n\n\n\ndf_com_nulo['Price'].fillna(value=0)                 # preencher com 0\n\n0    0\n1    0\n2    0\n3    0\n4    0\n5    0\n6    0\nName: Price, dtype: int64\n\n\n\ndf_com_nulo['Price'] = df_com_nulo['Price'].fillna(\n    df_com_nulo['Price'].mean())                     # preencher com a média\ndf_com_nulo['Price']\n\n0   NaN\n1   NaN\n2   NaN\n3   NaN\n4   NaN\n5   NaN\n6   NaN\nName: Price, dtype: float64\n\n\n\ndf_com_nulo.dropna()                                 # remover linhas com NaN\n\n\n\n\n\n\n\n\nmunicipio\nuf\npop_2021\nidh_2010\nPrice\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportante\n\n\nPreencher com média/mediana é uma decisão sobre os dados, não uma regra técnica: pode distorcer a análise. Antes de “consertar”, entenda por que está faltando."
   },
   {
     "objectID": "index.html#divide-aplica-combina",
     "href": "index.html#divide-aplica-combina",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Divide-aplica-combina",
-    "text": "Divide-aplica-combina\n\ngrouped = df.groupby(by='Fruits')          # agrupa pelo valor da coluna\ngrouped['Price'].agg(['count', 'sum', 'mean'])\n\n\n\n\n\n\n\nDica\n\n\ngroupby segue a lógica split-apply-combine: fatie os dados por um critério, aplique uma função em cada fatia, junte o resultado."
+    "text": "Divide-aplica-combina\n\ndf_vacinas.groupby('sexo')['idade'].mean()\n\nsexo\nFEMININO     40.247596\nMASCULINO    36.426745\nOUTROS       39.004808\nName: idade, dtype: float64\n\n\n\n# arredondando o valor com round\ndf_vacinas.groupby('sexo')['idade'].mean().round(2)\n\nsexo\nFEMININO     40.25\nMASCULINO    36.43\nOUTROS       39.00\nName: idade, dtype: float64\n\n\n\n# groupby com múltiplas estatísticas:\ndf_vacinas.groupby('sexo')['idade'].agg(['mean', 'median', 'count', 'min', 'max'])\n\n\n\n\n\n\n\n\nmean\nmedian\ncount\nmin\nmax\n\n\nsexo\n\n\n\n\n\n\n\n\n\nFEMININO\n40.247596\n41.0\n821446\n0.0\n118.0\n\n\nMASCULINO\n36.426745\n37.0\n642772\n-952.0\n118.0\n\n\nOUTROS\n39.004808\n37.0\n2080\n0.0\n102.0\n\n\n\n\n\n\n\n\n\n\n\n\n\nDica\n\n\ngroupby segue a lógica split-apply-combine: fatie os dados por um critério, aplique uma função em cada fatia, junte o resultado."
   },
   {
     "objectID": "index.html#gráficos-com-o-próprio-dataframe",
     "href": "index.html#gráficos-com-o-próprio-dataframe",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Gráficos com o próprio DataFrame",
     "text": "Gráficos com o próprio DataFrame\n\ndf_frutas.plot.bar(x='frutas', y=['quantidade', 'preco'])   # barras\ndf_frutas['quantidade'].plot.hist(bins=3)                   # histograma\ndf_frutas.plot.scatter(x='preco', y='preco_pago')         # dispersão\ndf_frutas.boxplot(column='preco', grid=False)             # box-plot (outliers)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngrouped = df_frutas.groupby('frutas').sum()\ngrouped.plot.pie(y='quantidade', subplots=True)\n\narray([&lt;Axes: ylabel='quantidade'&gt;], dtype=object)"
   },
   {
     "objectID": "index.html#por-que-um-apêndice-sobre-classes",
     "href": "index.html#por-que-um-apêndice-sobre-classes",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Por que um apêndice sobre classes?",
     "text": "Por que um apêndice sobre classes?\n\nUm dia você vai esbarrar em algo assim: objeto.metodo_1().metodo_2(), clf.fit(X, y), modelo.predict(...).\nClasses são os “moldes” que criam esses objetos. Você não precisa criar classes para usar pandas — mas ajuda muito ler código que tem uma.\nO objetivo aqui é só reconhecer a estrutura, não dominar orientação a objetos."
   },
   {
     "objectID": "index.html#a-anatomia-de-uma-classe",
     "href": "index.html#a-anatomia-de-uma-classe",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "A anatomia de uma classe",
     "text": "A anatomia de uma classe\nclass Estudante:\n    def __init__(self, nome, nota):     # construção do objeto\n        self.nome = nome                # atributos: dados guardados no objeto\n        self.nota = nota\n\n    def aprovado(self):                 # método: função do objeto\n        return self.nota &gt;= 7\n\ns = Estudante('Ana', 8.5)\ns.nome         # 'Ana'      &lt;- atributo (sem parênteses)\ns.aprovado()   # True       &lt;- método (com parênteses)\n\nclass define o molde; __init__ executa ao criar o objeto.\nself é o próprio objeto passando “por dentro” de cada método.\nAtributo = dado guardado; método = função associada.\n\n\n\nAna -&gt; True"
   },
   {
     "objectID": "index.html#classes-que-você-já-usou-sem-saber",
     "href": "index.html#classes-que-você-já-usou-sem-saber",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Classes que você já usou sem saber",
     "text": "Classes que você já usou sem saber\ntype(df)          # &lt;class 'pandas.core.frame.DataFrame'&gt;\ndict.fromkeys     # método de classe\ns.upper()         # método do objeto str\n\n'texto'.upper(), df.describe(), plt.figure(): tudo método de objetos criados por classes.\nAté os tipos escalares são classes: type(5) -&gt; &lt;class 'int'&gt;."
   },
   {
     "objectID": "index.html#onde-classes-aparecem-no-dia-a-dia-do-cientista-de-dados",
     "href": "index.html#onde-classes-aparecem-no-dia-a-dia-do-cientista-de-dados",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Onde classes aparecem no dia a dia do cientista de dados",
     "text": "Onde classes aparecem no dia a dia do cientista de dados\n\nscikit-learn: modelo = LinearRegression() → modelo.fit(X, y) → modelo.predict(X).\nmatplotlib: fig, ax = plt.subplots() — objetos figura e eixo com seus métodos.\nrequests: r = requests.get(url); o objeto r tem .status_code, .json().\nos.path / datetime: dt.strftime('%Y-%m-%d') — método do objeto de data.\n\n\n\n\n\n\n\nNota\n\n\nRegra de bolso: se o código cria um objeto com Nome() e depois chama .algo() nesse objeto, “algo” é um método definido quando o Nome escreve um def dentro de uma class."
   },
   {
     "objectID": "index.html#e-o-return-self-ponte-para-a-aula-04",
     "href": "index.html#e-o-return-self-ponte-para-a-aula-04",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "E o return self? (ponte para a aula 04)",
     "text": "E o return self? (ponte para a aula 04)\nclass Carrinho:\n    def __init__(self):\n        self.itens = []\n\n    def add(self, item):\n        self.itens.append(item)\n        return self     # devolve o próprio objeto!\n\ncart = Carrinho().add('banana').add('maçã').add('uva')\n\nQuando um método devolve self, dá para encadear: obj.a().b().c().\nÉ assim que o method chaining do pandas funciona — assunto da próxima aula."
   },
   {
     "objectID": "index.html#na-prática---dados-da-internet",
     "href": "index.html#na-prática---dados-da-internet",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Na prática - dados da internet",
     "text": "Na prática - dados da internet\nDiversos órgãos públicos disponibilizam bases de dados em suas páginas de “Dados Abertos”. Jogue em buscadores como Google, Bing ou Duckduckgo “dados abertos” e o nome da organização “prefeitura de”, “governo do estado de”. Encontre a base de dados desejada.\n\n\n\n\n\n\nAviso\n\n\nBaixar os dados pela URL apenas funcionará se a URL (o endereço) seja a do o arquivo: deve terminar com a extensão do arquivo: .csv, xls."
   },
   {
     "objectID": "index.html#comparação-series-e-outros-tipos-de-estrutura-de-dados",
     "href": "index.html#comparação-series-e-outros-tipos-de-estrutura-de-dados",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Comparação: Series e outros tipos de estrutura de dados",
     "text": "Comparação: Series e outros tipos de estrutura de dados\nÉ como um dicionário ordenado ou um array rotulado"
   },
   {
     "objectID": "index.html#semelhanças-com-listas",
     "href": "index.html#semelhanças-com-listas",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Semelhanças com listas",
     "text": "Semelhanças com listas\n\nÉ uma sequência ordenada de valores\nSuporta indexação (s[0]) e fatiamento (s[1:3])\nSuporta iteração (for x in s)\nTem len()"
   },
@@ -366,14 +366,14 @@
   {
     "objectID": "index.html#baixando-a-base-de-dados-e-carregando-no-ambiente-python",
     "href": "index.html#baixando-a-base-de-dados-e-carregando-no-ambiente-python",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Baixando a base de dados e carregando no ambiente Python",
     "text": "Baixando a base de dados e carregando no ambiente Python\nUtilizando o comando Linux wget para baixar os dados de sua URL terminada em .csv”: wget -O &lt;novo-nome-do-arquivo.csv&gt; &lt;URL da base de dados&gt;. -O indica o nome do arqvui de output.\n\n!wget -O vacinas_recife.csv \"https://dados.recife.pe.gov.br/dataset/71685aa9-d10f-46e0-9e5b-47c33b24644a/resource/da596cdc-a53f-4484-9856-14f0c06432e2/download/2022-perfil-das-pessoas-vacinadas-covid-19.csv\""
   },
   {
     "objectID": "index.html#na-prática-base-de-municípios-visibilityhidden",
     "href": "index.html#na-prática-base-de-municípios-visibilityhidden",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Na prática: base de municípios {visibility=“hidden”}`",
     "text": "Na prática: base de municípios {visibility=“hidden”}`\n\n\ngravado: True\n\n\n\n\n\n\n\n\n\n\n\nmunicipio\nuf\npop_2021\nidh_2010\n\n\n\n\n0\nRecife\nPE\n1 657 878\n0.755\n\n\n1\nOlinda\nPE\n414 735\n0.715\n\n\n2\nJaboatão\nPE\n721 739\n0.716\n\n\n3\nCaruaru\nPE\n365 212\n0.681\n\n\n4\nPetrolina\nPE\n356 762\n0.719\n\n\n5\nNatal\nRN\n899 578\n0.763\n\n\n6\nMossoró\nRN\n300 618\n0.709"
   },
@@ -387,85 +387,99 @@
   {
     "objectID": "index.html#exemplos-de-base-de-dados-públicas",
     "href": "index.html#exemplos-de-base-de-dados-públicas",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Exemplos de base de dados públicas",
     "text": "Exemplos de base de dados públicas\nEx.: Dados vacinação em Recife:\n\nhttps://dados.recife.pe.gov.br/dataset/perfil-das-pessoas-vacinadas-covid-19/resource/da596cdc-a53f-4484-9856-14f0c06432e2\nURL de tabela csv https://dados.recife.pe.gov.br/dataset/71685aa9-d10f-46e0-9e5b-47c33b24644a/resource/da596cdc-a53f-4484-9856-14f0c06432e2/download/2022-perfil-das-pessoas-vacinadas-covid-19.csv"
   },
   {
     "objectID": "index.html#exemplos-de-base-de-dados-públicas-1",
     "href": "index.html#exemplos-de-base-de-dados-públicas-1",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Exemplos de base de dados públicas",
     "text": "Exemplos de base de dados públicas\nEx.: Dados população de rua em Belo Horizonte:\n\nhttps://dados.pbh.gov.br/dataset/populacao-de-rua\nURL de tabela csv https://ckan.pbh.gov.br/dataset/1f868d62-d7c3-4121-8ffa-9ed66d71d3e2/resource/a77cddbd-aa5f-4a81-9f05-b8c3fe5ddf39/download/data_set_poprua_cadunico.csv"
   },
   {
     "objectID": "index.html#conferindo-se-o-arquivo-foi-baixado",
     "href": "index.html#conferindo-se-o-arquivo-foi-baixado",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Conferindo se o arquivo foi baixado",
     "text": "Conferindo se o arquivo foi baixado\nComandos Linux para conferir se o arquivo foi baixado com sucesso:\n\ncat imprime na tela o arquivo completo\n| pipe do Linux, liga o output do comando anterior (cat, no caso), a um novo comando (head).\nhead mostra apenas as primeiras linhas do arquivo\n-n 3: parâmetro do comando head: numero de linhas a serem impressas na tela\nwc -l “word count lines”. No caso, conta quantas linhas há no arquivo\n\n\n!head vacinas_recife.csv -n 3\n\n# opção 2\n!cat vacinas_recife.csv | head -n 3\n\n\"faixa_etaria\";\"idade\";\"sexo\";\"raca_cor\";\"municipio\";\"grupo\";\"categoria\";\"lote\";\"vacina_fabricante\";\"descricao_dose\";\"cnes\";\"sistema_origem\";\"data_vacinacao\"\n\"35 a 39 anos\";\"36\";\"FEMININO\";\"PARDA\";\"RECIFE\";\"TRABALHADORES DA SAÚDE\";\"\";\"FM2951\";\"3 - COMIRNATY (PFIZER)\";\"3\";\"DS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BARROS\";\"Conecta Recife\";\"2022-01-24 00:00:00.0\"\n\"35 a 39 anos\";\"37\";\"MASCULINO\";\"BRANCA\";\"RECIFE\";\"PESSOAS COM COMORBIDADES\";\"PESSOAS COM OBESIDADE MÓRBIDA (IMC &gt; OU = 40)\";\"FK8911\";\"3 - COMIRNATY (PFIZER)\";\"3\";\"DS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO\";\"Conecta Recife\";\"2022-01-11 00:00:00.0\"\n\"faixa_etaria\";\"idade\";\"sexo\";\"raca_cor\";\"municipio\";\"grupo\";\"categoria\";\"lote\";\"vacina_fabricante\";\"descricao_dose\";\"cnes\";\"sistema_origem\";\"data_vacinacao\"\n\"35 a 39 anos\";\"36\";\"FEMININO\";\"PARDA\";\"RECIFE\";\"TRABALHADORES DA SAÚDE\";\"\";\"FM2951\";\"3 - COMIRNATY (PFIZER)\";\"3\";\"DS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BARROS\";\"Conecta Recife\";\"2022-01-24 00:00:00.0\"\n\"35 a 39 anos\";\"37\";\"MASCULINO\";\"BRANCA\";\"RECIFE\";\"PESSOAS COM COMORBIDADES\";\"PESSOAS COM OBESIDADE MÓRBIDA (IMC &gt; OU = 40)\";\"FK8911\";\"3 - COMIRNATY (PFIZER)\";\"3\";\"DS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO\";\"Conecta Recife\";\"2022-01-11 00:00:00.0\"\ncat: erro de escrita: Pipe quebrado\n\n\n\n# conferindo quantas linhas o arquivo possui:\n!cat vacinas_recife.csv | wc -l\n\n1466349"
   },
   {
     "objectID": "index.html#diferenças-principais-entre-listas-e-series-do-pandas",
     "href": "index.html#diferenças-principais-entre-listas-e-series-do-pandas",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Diferenças principais entre listas e series do Pandas",
     "text": "Diferenças principais entre listas e series do Pandas\nÍndice rotulado (não apenas posicional)\n\nimport pandas as pd\n\ns = pd.Series([10, 20, 30], index=['a', 'b', 'c'])\ns['b']  # 20  → listas não fazem isso\n\nnp.int64(20)\n\n\nOperações são vetorizadas (rápidas, em C/NumPy):\n\ns * 2          # multiplica todos os elementos\n\na    20\nb    40\nc    60\ndtype: int64\n\n\n\ns[s &gt; 15]      # filtro booleano\n\nb    20\nc    30\ndtype: int64\n\n\nEm Python tradicional, utilizando lista ao invés de serie, para assim:\n\nnumeros = [10, 20, 30]\n\n#  repetição, não multiplicação!\nnumeros * 2 \n\n[10, 20, 30, 10, 20, 30]\n\n\n\nresultado = []\nfor numero in numeros:\n  resultado.append(numero * 2)\n\nprint(resultado)\n\n[20, 40, 60]\n\n\n\n# opção 2, com função lambda \nlist(map(lambda x: x * 2, numeros))\n\n[20, 40, 60]\n\n\nAlinhamento automático em operações\n\ns1 = pd.Series([1,2,3], index=['a','b','c'])\ns2 = pd.Series([10,20,30], index=['b','c','d'])\ns1 + s2   # alinha pelos índices, gera NaN onde não há correspondência\n\na     NaN\nb    12.0\nc    23.0\nd     NaN\ndtype: float64"
   },
   {
     "objectID": "index.html#config-no-google-drive",
     "href": "index.html#config-no-google-drive",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "1) Config no google drive",
     "text": "1) Config no google drive\n\nAcesse drive.google.com e faça login.\nClique no ícone de engrenagem ⚙️ no canto superior direito e selecione “Configurações”.\nNa página de configurações, encontre a opção “Converter uploads para o formato dos editores de arquivos do Google” (ou “Converter arquivos carregados para o formato do Google Docs”).\nDesmarque esta opção.\n\n\nnao converter arquivoClique em “Concluir” para salvar."
   },
   {
     "objectID": "index.html#criar-um-novo-diretóriopastaficheiro",
     "href": "index.html#criar-um-novo-diretóriopastaficheiro",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "2) Criar um novo diretório/pasta/ficheiro",
     "text": "2) Criar um novo diretório/pasta/ficheiro\nNo Google Drive, você pode criar pastas e arquivos de duas formas:\nPela interface web:\n\nAcesse drive.google.com\nClique em “+ Novo” → “Pasta” (ou “Nova pasta”) para criar um diretório\nPara criar um arquivo, clique em “+ Novo” → escolha o tipo (Documentos, Planilhas, etc.)"
   },
   {
     "objectID": "index.html#subir-arquivo-upload-no-google-drive",
     "href": "index.html#subir-arquivo-upload-no-google-drive",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "3) Subir arquivo (upload) no Google Drive",
     "text": "3) Subir arquivo (upload) no Google Drive"
   },
   {
     "objectID": "index.html#conectando-drive-ao-colab",
     "href": "index.html#conectando-drive-ao-colab",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "4) conectando Drive ao Colab",
     "text": "4) conectando Drive ao Colab\n\nfrom google.colab import drive\n# em qual pasta ele vai montar o drive:\ndrive.mount('/content/drive')\n\nRode a célula acima.\nAbrirá uma janela perguntando se você permite o acesso:\n\n\n\ncolab drive\n\n\n\nClique em “Conectar ao Google Drive” (ou “Permitir”).\nOutra janela se abrirá. Escolha a conta Google desejada\nRevise as permissões e clique em “Permitir”\n\n\n\n\nacesso 2"
   },
   {
     "objectID": "index.html#verificando-o-acesso",
     "href": "index.html#verificando-o-acesso",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Verificando o acesso",
     "text": "Verificando o acesso\n\n# Listar o conteúdo do Drive\n!ls /content/drive/MyDrive"
   },
   {
     "objectID": "index.html#observações-importantes",
     "href": "index.html#observações-importantes",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Observações importantes:",
     "text": "Observações importantes:\n\nA conexão é temporária: sempre que reiniciar o ambiente do Colab, será necessário montar o Drive novamente.\nO Google Drive tem cota de armazenamento (15 GB gratuitos, compartilhados com Gmail e Fotos).\nDesmonte o Drive após o uso: quando terminar de usar, você pode desconectar manualmente o Drive para interromper o acesso. Ou simplesmente encerre a sessão do Colab, e a montagem será invalidada automaticamente."
   },
   {
     "objectID": "index.html#filtragem-com-query",
     "href": "index.html#filtragem-com-query",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Filtragem com query",
     "text": "Filtragem com query\n\n# só as linhas com preco &gt; 70\ndf_frutas.query('preco &gt; 70')\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100\n\n\n\n\n\n\n\n\n# só as linhas com preco &gt; 70\ndf_frutas.loc[(df_frutas['preco'] &gt; 70) & (df_frutas['quantidade'] &gt; 15)]\ndf_frutas.query('preco &gt; 70 and quantidade &gt; 15')\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100"
   },
   {
     "objectID": "index.html#where",
     "href": "index.html#where",
-    "title": "Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "where",
     "text": "where\nO where() é um método que mantém os valores onde a condição é True e substitui onde é False (por padrão, por NaN). É o “filtro que preserva a forma” — diferente do query/loc, que remove linhas. Where preserva o número de linhas.\n\n# mantém condição; senão -&gt; NaN\ndf_frutas['preco'].where(df_frutas['preco'] &gt; 50)\n\n0     80.0\n1    100.0\n2      NaN\n3     70.0\nName: preco, dtype: float64\n\n\n\n\n\n\n\n\nDica\n\n\nquery recebe uma string de expressão — leitura mais próxima da linguagem natural."
+  },
+  {
+    "objectID": "index.html#groupby",
+    "href": "index.html#groupby",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
+    "section": "groupby",
+    "text": "groupby\nA função groupby agrupa/agrega os dados de uma variável e aplica algum cálculo para cada item desta categoria agrupada.\n\n# média de idades por sexo\ndf_vacinas.groupby('sexo')['idade'].mean()\n\nsexo\nFEMININO     40.247596\nMASCULINO    36.426745\nOUTROS       39.004808\nName: idade, dtype: float64\n\n\n\n# arredondando o valor com round\ndf_vacinas.groupby('sexo')['idade'].mean().round(2)\n\nsexo\nFEMININO     40.25\nMASCULINO    36.43\nOUTROS       39.00\nName: idade, dtype: float64\n\n\n\n# groupby com múltiplas estatísticas:\ndf_vacinas.groupby('sexo')['idade'].agg(['mean', 'median', 'count', 'min', 'max'])\n\n\n\n\n\n\n\n\nmean\nmedian\ncount\nmin\nmax\n\n\nsexo\n\n\n\n\n\n\n\n\n\nFEMININO\n40.247596\n41.0\n821446\n0.0\n118.0\n\n\nMASCULINO\n36.426745\n37.0\n642772\n-952.0\n118.0\n\n\nOUTROS\n39.004808\n37.0\n2080\n0.0\n102.0\n\n\n\n\n\n\n\n\n\n\n\n\n\nDica\n\n\ngroupby segue a lógica split-apply-combine: fatie os dados por um critério, aplique uma função em cada fatia, junte o resultado."
+  },
+  {
+    "objectID": "index.html#filtrar-linhas-com-variavel",
+    "href": "index.html#filtrar-linhas-com-variavel",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
+    "section": "filtrar linhas com variavel",
+    "text": "filtrar linhas com variavel\n\nvacinas = df_vacinas['vacina_fabricante'].unique()\nvacina_escolhida = vacinas[0]\nvacina_escolhida\n\n'3 - COMIRNATY (PFIZER)'\n\n\n\ndf_vacinas[df_vacinas['vacina_fabricante'] == vacina_escolhida]\n\n\n\n\n\n\n\n\nfaixa_etaria\nidade\nsexo\nraca_cor\nmunicipio\ngrupo\ncategoria\nlote\nvacina_fabricante\ndescricao_dose\ncnes\nsistema_origem\ndata_vacinacao\n\n\n\n\n0\n35 a 39 anos\n36.0\nFEMININO\nPARDA\nRECIFE\nTRABALHADORES DA SAÚDE\nNaN\nFM2951\n3 - COMIRNATY (PFIZER)\n3\nDS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BA...\nConecta Recife\n2022-01-24 00:00:00.0\n\n\n1\n35 a 39 anos\n37.0\nMASCULINO\nBRANCA\nRECIFE\nPESSOAS COM COMORBIDADES\nPESSOAS COM OBESIDADE MÓRBIDA (IMC &gt; OU = 40)\nFK8911\n3 - COMIRNATY (PFIZER)\n3\nDS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO\nConecta Recife\n2022-01-11 00:00:00.0\n\n\n2\n20 a 24 anos\n20.0\nMASCULINO\nBRANCA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nNaN\nFL4222\n3 - COMIRNATY (PFIZER)\n3\nDS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO\nConecta Recife\n2022-01-08 00:00:00.0\n\n\n4\n25 a 29 anos\n26.0\nFEMININO\nBRANCA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nNaN\nFM2967\n3 - COMIRNATY (PFIZER)\n3\nDS 7: CNES: 0000647 - POLICLINICA CLEMENTINO F...\nConecta Recife\n2022-02-01 00:00:00.0\n\n\n5\n30 a 34 anos\n31.0\nFEMININO\nPARDA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nNaN\nFM2967\n3 - COMIRNATY (PFIZER)\n3\nDS 6: CNES: 0001392 - MIGUEL DE LIMA VALVERDE.\nConecta Recife\n2022-02-02 00:00:00.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n1466336\n35 a 39 anos\n35.0\nMASCULINO\nPARDA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nOUTRAS\nFM2951\n3 - COMIRNATY (PFIZER)\n3\nDS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO\nConecta Recife\n2022-01-18 00:00:00.0\n\n\n1466337\n35 a 39 anos\n37.0\nMASCULINO\nPRETA\nRECIFE\nPESSOAS COM COMORBIDADES\nPESSOAS VIVENDO COM HIV\nFL4222\n3 - COMIRNATY (PFIZER)\n3\nDS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER\nConecta Recife\n2022-01-07 00:00:00.0\n\n\n1466339\n35 a 39 anos\n36.0\nFEMININO\nPARDA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nOUTRAS\nFM2951\n3 - COMIRNATY (PFIZER)\n2\nDS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER\nConecta Recife\n2022-01-25 00:00:00.0\n\n\n1466341\n35 a 39 anos\n35.0\nFEMININO\nBRANCA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nOUTRAS\nFL4222\n3 - COMIRNATY (PFIZER)\n3\nDS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BA...\nConecta Recife\n2022-01-08 00:00:00.0\n\n\n1466342\n45 a 49 anos\n45.0\nMASCULINO\nBRANCA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nNaN\nFL4222\n3 - COMIRNATY (PFIZER)\n3\nDS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER\nConecta Recife\n2022-01-07 00:00:00.0\n\n\n\n\n440468 rows × 13 columns"
   }
 ]

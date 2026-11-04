@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Alisson Soares">
-  <title>Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas</title>
+  <title>Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -204,7 +204,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introdução à Análise de Dados com Python — Aula 03: Primeiros passos com o pacote Pandas</h1>
+  <h1 class="title">Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas</h1>
   <p class="subtitle">Análise de dados tabulares</p>
 
 <div class="quarto-title-authors">
@@ -295,7 +295,7 @@ Alisson Soares
 </section>
 <section id="instalação-e-importação" class="slide level2">
 <h2>Instalação e importação</h2>
-<div id="3ef97174" class="cell" data-execution_count="1">
+<div id="9fe0317f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a aria-label="2"></a></span>
 <span id="cb1-3"><a aria-label="3"></a><span class="bu">print</span>(pd.__version__)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
@@ -364,7 +364,7 @@ Alisson Soares
 </div>
 </div>
 <div id="cell-ler-csv" class="cell" data-execution_count="5">
-<div id="ler-csv" class="cell-output cell-output-display" data-execution_count="234">
+<div id="ler-csv" class="cell-output cell-output-display" data-execution_count="72">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -528,7 +528,7 @@ cat: erro de escrita: Pipe quebrado</code></pre>
 <span id="cb11-3"><a aria-label="3"></a>df_vacinas <span class="op">=</span> pd.read_csv(<span class="st">"vacinas_recife.csv"</span>, </span>
 <span id="cb11-4"><a aria-label="4"></a>                         on_bad_lines<span class="op">=</span><span class="st">'skip'</span>, delimiter<span class="op">=</span> <span class="st">';'</span>)</span>
 <span id="cb11-5"><a aria-label="5"></a>df_vacinas</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="read_csv_vacinas_recife" class="cell-output cell-output-display" data-execution_count="237">
+<div id="read_csv_vacinas_recife" class="cell-output cell-output-display" data-execution_count="75">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -861,7 +861,7 @@ dtype: int64</code></pre>
 <div id="cell-series-rotulos" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a aria-label="1"></a>obj2 <span class="op">=</span> pd.Series([<span class="dv">4</span>, <span class="dv">7</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">3</span>], index<span class="op">=</span>[<span class="st">'d'</span>, <span class="st">'b'</span>, <span class="st">'a'</span>, <span class="st">'c'</span>])</span>
 <span id="cb17-2"><a aria-label="2"></a>obj2</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="series-rotulos" class="cell-output cell-output-display" data-execution_count="239">
+<div id="series-rotulos" class="cell-output cell-output-display" data-execution_count="77">
 <pre><code>d    4
 b    7
 a   -5
@@ -869,9 +869,9 @@ c    3
 dtype: int64</code></pre>
 </div>
 </div>
-<div id="334762b5" class="cell" data-execution_count="17">
+<div id="12e08c1a" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a aria-label="1"></a>obj2[<span class="st">'a'</span>]  <span class="co"># acesso pelo rótulo</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="240">
+<div class="cell-output cell-output-display" data-execution_count="78">
 <pre><code>np.int64(-5)</code></pre>
 </div>
 </div>
@@ -883,7 +883,7 @@ dtype: int64</code></pre>
 <span id="cb21-2"><a aria-label="2"></a>         <span class="st">'Caruaru'</span>: <span class="dv">365_212</span>, <span class="st">'Mossoró'</span>: <span class="dv">300_618</span>}</span>
 <span id="cb21-3"><a aria-label="3"></a></span>
 <span id="cb21-4"><a aria-label="4"></a>pd.Series(sdata)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="series-dict" class="cell-output cell-output-display" data-execution_count="241">
+<div id="series-dict" class="cell-output cell-output-display" data-execution_count="79">
 <pre><code>Recife     1657878
 Olinda      414735
 Caruaru     365212
@@ -913,14 +913,14 @@ dtype: int64</code></pre>
 <span id="cb23-2"><a aria-label="2"></a></span>
 <span id="cb23-3"><a aria-label="3"></a>s <span class="op">=</span> pd.Series([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], index<span class="op">=</span>[<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>])</span>
 <span id="cb23-4"><a aria-label="4"></a>s[<span class="st">'b'</span>]  <span class="co"># 20  → listas não fazem isso</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="series" class="cell-output cell-output-display" data-execution_count="242">
+<div id="series" class="cell-output cell-output-display" data-execution_count="80">
 <pre><code>np.int64(20)</code></pre>
 </div>
 </div>
 <h3 id="operações-são-vetorizadas-rápidas-em-cnumpy">Operações são vetorizadas (rápidas, em C/NumPy):</h3>
 <div id="cell-series_vezes_2" class="cell" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a aria-label="1"></a>s <span class="op">*</span> <span class="dv">2</span>          <span class="co"># multiplica todos os elementos</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="series_vezes_2" class="cell-output cell-output-display" data-execution_count="243">
+<div id="series_vezes_2" class="cell-output cell-output-display" data-execution_count="81">
 <pre><code>a    20
 b    40
 c    60
@@ -929,7 +929,7 @@ dtype: int64</code></pre>
 </div>
 <div id="cell-series_bool" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a aria-label="1"></a>s[s <span class="op">&gt;</span> <span class="dv">15</span>]      <span class="co"># filtro booleano</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="series_bool" class="cell-output cell-output-display" data-execution_count="244">
+<div id="series_bool" class="cell-output cell-output-display" data-execution_count="82">
 <pre><code>b    20
 c    30
 dtype: int64</code></pre>
@@ -941,7 +941,7 @@ dtype: int64</code></pre>
 <span id="cb29-2"><a aria-label="2"></a></span>
 <span id="cb29-3"><a aria-label="3"></a><span class="co">#  repetição, não multiplicação!</span></span>
 <span id="cb29-4"><a aria-label="4"></a>numeros <span class="op">*</span> <span class="dv">2</span> </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="numeros-vezes_2" class="cell-output cell-output-display" data-execution_count="245">
+<div id="numeros-vezes_2" class="cell-output cell-output-display" data-execution_count="83">
 <pre><code>[10, 20, 30, 10, 20, 30]</code></pre>
 </div>
 </div>
@@ -958,7 +958,7 @@ dtype: int64</code></pre>
 <div id="cell-lista_multiplicacao-lambda" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a aria-label="1"></a><span class="co"># opção 2, com função lambda </span></span>
 <span id="cb33-2"><a aria-label="2"></a><span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">*</span> <span class="dv">2</span>, numeros))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="lista_multiplicacao-lambda" class="cell-output cell-output-display" data-execution_count="247">
+<div id="lista_multiplicacao-lambda" class="cell-output cell-output-display" data-execution_count="85">
 <pre><code>[20, 40, 60]</code></pre>
 </div>
 </div>
@@ -967,7 +967,7 @@ dtype: int64</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a aria-label="1"></a>s1 <span class="op">=</span> pd.Series([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], index<span class="op">=</span>[<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>])</span>
 <span id="cb35-2"><a aria-label="2"></a>s2 <span class="op">=</span> pd.Series([<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>], index<span class="op">=</span>[<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>])</span>
 <span id="cb35-3"><a aria-label="3"></a>s1 <span class="op">+</span> s2   <span class="co"># alinha pelos índices, gera NaN onde não há correspondência</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="series-alinhamento-automatico" class="cell-output cell-output-display" data-execution_count="248">
+<div id="series-alinhamento-automatico" class="cell-output cell-output-display" data-execution_count="86">
 <pre><code>a     NaN
 b    12.0
 c    23.0
@@ -986,7 +986,7 @@ dtype: float64</code></pre>
 <h2>Criando um DataFrame</h2>
 <div id="cell-pdDataframe" class="cell" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a aria-label="1"></a>pd.DataFrame({<span class="st">'Sim'</span>: [<span class="dv">30</span>, <span class="dv">25</span>], <span class="st">'Não'</span>: [<span class="dv">31</span>, <span class="dv">2</span>]})</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="pddataframe" class="cell-output cell-output-display" data-execution_count="249">
+<div id="pddataframe" class="cell-output cell-output-display" data-execution_count="87">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1032,7 +1032,7 @@ dtype: float64</code></pre>
 <span id="cb38-2"><a aria-label="2"></a>         <span class="st">'quantidade'</span>: [<span class="dv">40</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">10</span>],</span>
 <span id="cb38-3"><a aria-label="3"></a>         <span class="st">'preco'</span>: [<span class="dv">80</span>, <span class="dv">100</span>, <span class="dv">50</span>, <span class="dv">70</span>]}</span>
 <span id="cb38-4"><a aria-label="4"></a><span class="bu">type</span>(dados)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="df-basico-dict" class="cell-output cell-output-display" data-execution_count="250">
+<div id="df-basico-dict" class="cell-output cell-output-display" data-execution_count="88">
 <pre><code>dict</code></pre>
 </div>
 </div>
@@ -1108,7 +1108,7 @@ dtype: float64</code></pre>
 </div>
 <div id="cell-df-basico-type" class="cell" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a aria-label="1"></a><span class="bu">type</span>(df_frutas)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="df-basico-type" class="cell-output cell-output-display" data-execution_count="253">
+<div id="df-basico-type" class="cell-output cell-output-display" data-execution_count="91">
 <pre><code>pandas.core.frame.DataFrame</code></pre>
 </div>
 </div>
@@ -1117,19 +1117,19 @@ dtype: float64</code></pre>
 <h2>Inspecionando o DataFrame</h2>
 <div id="cell-inspecionando-columns" class="cell" data-execution_count="31">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a aria-label="1"></a>df_frutas.columns    <span class="co"># nomes das colunas</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="inspecionando-columns" class="cell-output cell-output-display" data-execution_count="254">
+<div id="inspecionando-columns" class="cell-output cell-output-display" data-execution_count="92">
 <pre><code>Index(['frutas', 'quantidade', 'preco'], dtype='object')</code></pre>
 </div>
 </div>
 <div id="cell-inspecionando-shape" class="cell" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a aria-label="1"></a>df_frutas.shape      <span class="co"># (linhas, colunas)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="inspecionando-shape" class="cell-output cell-output-display" data-execution_count="255">
+<div id="inspecionando-shape" class="cell-output cell-output-display" data-execution_count="93">
 <pre><code>(4, 3)</code></pre>
 </div>
 </div>
 <div id="cell-inspecionando-2" class="cell" data-execution_count="33">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a aria-label="1"></a>df_frutas.dtypes     <span class="co"># tipos das colunas</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="inspecionando-2" class="cell-output cell-output-display" data-execution_count="256">
+<div id="inspecionando-2" class="cell-output cell-output-display" data-execution_count="94">
 <pre><code>frutas        object
 quantidade     int64
 preco          int64
@@ -1138,7 +1138,7 @@ dtype: object</code></pre>
 </div>
 <div id="cell-inspecionando-dtypes" class="cell" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a aria-label="1"></a>df_frutas.dtypes     <span class="co"># tipos das colunas</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="inspecionando-dtypes" class="cell-output cell-output-display" data-execution_count="257">
+<div id="inspecionando-dtypes" class="cell-output cell-output-display" data-execution_count="95">
 <pre><code>frutas        object
 quantidade     int64
 preco          int64
@@ -1147,7 +1147,7 @@ dtype: object</code></pre>
 </div>
 <div id="cell-inspecionando-values" class="cell" data-execution_count="35">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a aria-label="1"></a>df_frutas.values     <span class="co"># dados como array NumPy</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="inspecionando-values" class="cell-output cell-output-display" data-execution_count="258">
+<div id="inspecionando-values" class="cell-output cell-output-display" data-execution_count="96">
 <pre><code>array([['Manga', 40, 80],
        ['Maçã', 20, 100],
        ['Banana', 25, 50],
@@ -1177,7 +1177,7 @@ memory usage: 228.0+ bytes</code></pre>
 </section>
 <section id="primeiras-e-últimas-linhas" class="slide level2">
 <h2>Primeiras e últimas linhas</h2>
-<div id="e05bd5e9" class="cell" data-execution_count="37">
+<div id="1f1158bc" class="cell" data-execution_count="37">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a aria-label="1"></a>df.head()     <span class="co"># primeiras 5 linhas</span></span>
 <span id="cb57-2"><a aria-label="2"></a>df.tail()     <span class="co"># últimas 5 linhas</span></span>
 <span id="cb57-3"><a aria-label="3"></a>df.sample(<span class="dv">3</span>)  <span class="co"># 3 linhas aleatórias</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1210,7 +1210,7 @@ memory usage: 228.0+ bytes</code></pre>
 <span id="cb58-4"><a aria-label="4"></a>df_frutas <span class="op">=</span> pd.DataFrame(dados)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="cell-colunas" class="cell" data-execution_count="39">
-<div id="colunas" class="cell-output cell-output-display" data-execution_count="261">
+<div id="colunas" class="cell-output cell-output-display" data-execution_count="99">
 <pre><code>0      Manga
 1       Maçã
 2     Banana
@@ -1219,7 +1219,7 @@ Name: frutas, dtype: object</code></pre>
 </div>
 </div>
 <div id="cell-colunas2" class="cell" data-execution_count="40">
-<div id="colunas2" class="cell-output cell-output-display" data-execution_count="262">
+<div id="colunas2" class="cell-output cell-output-display" data-execution_count="100">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1271,12 +1271,252 @@ Name: frutas, dtype: object</code></pre>
 </div>
 </div>
 </section>
+<section id="loc-seleção-por-rótulo" class="slide level2">
+<h2><code>loc</code>: seleção por rótulo</h2>
+<div id="cell-loc-exemplo1" class="cell" data-execution_count="41">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a aria-label="1"></a>df_frutas.loc[<span class="dv">0</span>]                          <span class="co"># linha de índice 0</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="loc-exemplo1" class="cell-output cell-output-display" data-execution_count="101">
+<pre><code>frutas        Manga
+quantidade       40
+preco            80
+Name: 0, dtype: object</code></pre>
+</div>
+</div>
+<div id="cell-loc-exemplo2" class="cell" data-execution_count="42">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a aria-label="1"></a>df_frutas.loc[:, <span class="st">'frutas'</span>:<span class="st">'preco'</span>]        <span class="co"># fatia de colunas</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="loc-exemplo2" class="cell-output cell-output-display" data-execution_count="102">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">frutas</th>
+<th data-quarto-table-cell-role="th">quantidade</th>
+<th data-quarto-table-cell-role="th">preco</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Manga</td>
+<td>40</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Maçã</td>
+<td>20</td>
+<td>100</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Banana</td>
+<td>25</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Laranja</td>
+<td>10</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-loc-exemplo3" class="cell" data-execution_count="43">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a aria-label="1"></a><span class="co"># filtro + colunas</span></span>
+<span id="cb63-2"><a aria-label="2"></a>df_frutas.loc[df_frutas[<span class="st">'preco'</span>] <span class="op">&lt;</span> <span class="dv">70</span>, [<span class="st">'frutas'</span>, <span class="st">'preco'</span>]]  </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="loc-exemplo3" class="cell-output cell-output-display" data-execution_count="103">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">frutas</th>
+<th data-quarto-table-cell-role="th">preco</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Banana</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="iloc-seleção-por-posição" class="slide level2">
+<h2><code>iloc</code>: seleção por posição</h2>
+<div id="cell-iloc-exemplos" class="cell" data-execution_count="44">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a aria-label="1"></a><span class="co"># da posição 2 a 4 (fim exclusivo!)</span></span>
+<span id="cb64-2"><a aria-label="2"></a>df_frutas.iloc[<span class="dv">2</span>:<span class="dv">5</span>]        </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="iloc-exemplos" class="cell-output cell-output-display" data-execution_count="104">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">frutas</th>
+<th data-quarto-table-cell-role="th">quantidade</th>
+<th data-quarto-table-cell-role="th">preco</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Banana</td>
+<td>25</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Laranja</td>
+<td>10</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-iloc-exemplo2" class="cell" data-execution_count="45">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a aria-label="1"></a><span class="co"># colunas de posição 0 e 2</span></span>
+<span id="cb65-2"><a aria-label="2"></a>df_frutas.iloc[:, [<span class="dv">0</span>, <span class="dv">2</span>]]  </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="iloc-exemplo2" class="cell-output cell-output-display" data-execution_count="105">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">frutas</th>
+<th data-quarto-table-cell-role="th">preco</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Manga</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Maçã</td>
+<td>100</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Banana</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Laranja</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-iloc-exemplo3" class="cell" data-execution_count="46">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a aria-label="1"></a><span class="co"># valor único por rótulo</span></span>
+<span id="cb66-2"><a aria-label="2"></a>df_frutas.at[<span class="dv">1</span>, <span class="st">'preco'</span>]   </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="iloc-exemplo3" class="cell-output cell-output-display" data-execution_count="106">
+<pre><code>np.int64(100)</code></pre>
+</div>
+</div>
+<div id="cell-iloc-exemplo4" class="cell" data-execution_count="47">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a aria-label="1"></a><span class="co"># valor único por posição</span></span>
+<span id="cb68-2"><a aria-label="2"></a>df_frutas.iat[<span class="dv">1</span>, <span class="dv">2</span>]        </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="iloc-exemplo4" class="cell-output cell-output-display" data-execution_count="107">
+<pre><code>np.int64(100)</code></pre>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Aviso</strong></p>
+</div>
+<div class="callout-content">
+<p>Diferença importante: com <code>loc</code>, o limite final <strong>é incluído</strong> (‘frutas’:‘preco’ inclui preco); com <code>iloc</code> (fatias), o limite final <strong>não é incluído</strong>.</p>
+</div>
+</div>
+</div>
+</section>
 <section id="top-n-bottom-n-por-uma-coluna" class="slide level2">
 <h2>Top-N / Bottom-N por uma coluna</h2>
-<div id="cell-nlargest" class="cell" data-execution_count="41">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a aria-label="1"></a>df_frutas.nlargest(<span class="dv">2</span>, <span class="st">'preco'</span>)    <span class="co"># 2 registros com preço mais alto</span></span>
-<span id="cb60-2"><a aria-label="2"></a>df_frutas.nsmallest(<span class="dv">2</span>, <span class="st">'preco'</span>)   <span class="co"># 2 com preço mais baixo</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="nlargest" class="cell-output cell-output-display" data-execution_count="263">
+<div id="cell-nlargest" class="cell" data-execution_count="48">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a aria-label="1"></a>df_frutas.nlargest(<span class="dv">2</span>, <span class="st">'preco'</span>)    <span class="co"># 2 registros com preço mais alto</span></span>
+<span id="cb70-2"><a aria-label="2"></a>df_frutas.nsmallest(<span class="dv">2</span>, <span class="st">'preco'</span>)   <span class="co"># 2 com preço mais baixo</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="nlargest" class="cell-output cell-output-display" data-execution_count="108">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1323,8 +1563,8 @@ Name: frutas, dtype: object</code></pre>
 </section>
 <section id="filtro-com-máscara-booleana" class="slide level2">
 <h2>Filtro com máscara booleana</h2>
-<div id="cell-filtro-booleano" class="cell" data-execution_count="42">
-<div id="filtro-booleano" class="cell-output cell-output-display" data-execution_count="264">
+<div id="cell-filtro-booleano" class="cell" data-execution_count="49">
+<div id="filtro-booleano" class="cell-output cell-output-display" data-execution_count="109">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1374,8 +1614,8 @@ Name: frutas, dtype: object</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-filtro-booleano2" class="cell" data-execution_count="43">
-<div id="filtro-booleano2" class="cell-output cell-output-display" data-execution_count="265">
+<div id="cell-filtro-booleano2" class="cell" data-execution_count="50">
+<div id="filtro-booleano2" class="cell-output cell-output-display" data-execution_count="110">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1418,246 +1658,6 @@ Name: frutas, dtype: object</code></pre>
 </tbody>
 </table>
 
-</div>
-</div>
-</div>
-</section>
-<section id="loc-seleção-por-rótulo" class="slide level2">
-<h2><code>loc</code>: seleção por rótulo</h2>
-<div id="cell-loc-exemplo1" class="cell" data-execution_count="44">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a aria-label="1"></a>df_frutas.loc[<span class="dv">0</span>]                          <span class="co"># linha de índice 0</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="loc-exemplo1" class="cell-output cell-output-display" data-execution_count="266">
-<pre><code>frutas        Manga
-quantidade       40
-preco            80
-Name: 0, dtype: object</code></pre>
-</div>
-</div>
-<div id="cell-loc-exemplo2" class="cell" data-execution_count="45">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a aria-label="1"></a>df_frutas.loc[:, <span class="st">'frutas'</span>:<span class="st">'preco'</span>]        <span class="co"># fatia de colunas</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="loc-exemplo2" class="cell-output cell-output-display" data-execution_count="267">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-<table class="dataframe caption-top" data-border="1">
-<thead>
-<tr class="header" style="text-align: right;">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">frutas</th>
-<th data-quarto-table-cell-role="th">quantidade</th>
-<th data-quarto-table-cell-role="th">preco</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Manga</td>
-<td>40</td>
-<td>80</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Maçã</td>
-<td>20</td>
-<td>100</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Banana</td>
-<td>25</td>
-<td>50</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Laranja</td>
-<td>10</td>
-<td>70</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="cell-loc-exemplo3" class="cell" data-execution_count="46">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a aria-label="1"></a><span class="co"># filtro + colunas</span></span>
-<span id="cb64-2"><a aria-label="2"></a>df_frutas.loc[df_frutas[<span class="st">'preco'</span>] <span class="op">&lt;</span> <span class="dv">70</span>, [<span class="st">'frutas'</span>, <span class="st">'preco'</span>]]  </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="loc-exemplo3" class="cell-output cell-output-display" data-execution_count="268">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-<table class="dataframe caption-top" data-border="1">
-<thead>
-<tr class="header" style="text-align: right;">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">frutas</th>
-<th data-quarto-table-cell-role="th">preco</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Banana</td>
-<td>50</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</section>
-<section id="iloc-seleção-por-posição" class="slide level2">
-<h2><code>iloc</code>: seleção por posição</h2>
-<div id="cell-iloc-exemplos" class="cell" data-execution_count="47">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a aria-label="1"></a><span class="co"># da posição 2 a 4 (fim exclusivo!)</span></span>
-<span id="cb65-2"><a aria-label="2"></a>df_frutas.iloc[<span class="dv">2</span>:<span class="dv">5</span>]        </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="iloc-exemplos" class="cell-output cell-output-display" data-execution_count="269">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-<table class="dataframe caption-top" data-border="1">
-<thead>
-<tr class="header" style="text-align: right;">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">frutas</th>
-<th data-quarto-table-cell-role="th">quantidade</th>
-<th data-quarto-table-cell-role="th">preco</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Banana</td>
-<td>25</td>
-<td>50</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Laranja</td>
-<td>10</td>
-<td>70</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="cell-iloc-exemplo2" class="cell" data-execution_count="48">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a aria-label="1"></a><span class="co"># colunas de posição 0 e 2</span></span>
-<span id="cb66-2"><a aria-label="2"></a>df_frutas.iloc[:, [<span class="dv">0</span>, <span class="dv">2</span>]]  </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="iloc-exemplo2" class="cell-output cell-output-display" data-execution_count="270">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-<table class="dataframe caption-top" data-border="1">
-<thead>
-<tr class="header" style="text-align: right;">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">frutas</th>
-<th data-quarto-table-cell-role="th">preco</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Manga</td>
-<td>80</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>Maçã</td>
-<td>100</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>Banana</td>
-<td>50</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>Laranja</td>
-<td>70</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="cell-iloc-exemplo3" class="cell" data-execution_count="49">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a aria-label="1"></a><span class="co"># valor único por rótulo</span></span>
-<span id="cb67-2"><a aria-label="2"></a>df_frutas.at[<span class="dv">1</span>, <span class="st">'preco'</span>]   </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="iloc-exemplo3" class="cell-output cell-output-display" data-execution_count="271">
-<pre><code>np.int64(100)</code></pre>
-</div>
-</div>
-<div id="cell-iloc-exemplo4" class="cell" data-execution_count="50">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a aria-label="1"></a><span class="co"># valor único por posição</span></span>
-<span id="cb69-2"><a aria-label="2"></a>df_frutas.iat[<span class="dv">1</span>, <span class="dv">2</span>]        </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="iloc-exemplo4" class="cell-output cell-output-display" data-execution_count="272">
-<pre><code>np.int64(100)</code></pre>
-</div>
-</div>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Aviso</strong></p>
-</div>
-<div class="callout-content">
-<p>Diferença importante: com <code>loc</code>, o limite final <strong>é incluído</strong> (‘frutas’:‘preco’ inclui preco); com <code>iloc</code> (fatias), o limite final <strong>não é incluído</strong>.</p>
 </div>
 </div>
 </div>
@@ -1667,7 +1667,7 @@ Name: 0, dtype: object</code></pre>
 <div id="cell-query_maior_setenta" class="cell" data-execution_count="52">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a aria-label="1"></a><span class="co"># só as linhas com preco &gt; 70</span></span>
 <span id="cb71-2"><a aria-label="2"></a>df_frutas.query(<span class="st">'preco &gt; 70'</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="query_maior_setenta" class="cell-output cell-output-display" data-execution_count="274">
+<div id="query_maior_setenta" class="cell-output cell-output-display" data-execution_count="112">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1715,7 +1715,7 @@ Name: 0, dtype: object</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a aria-label="1"></a><span class="co"># só as linhas com preco &gt; 70</span></span>
 <span id="cb72-2"><a aria-label="2"></a>df_frutas.loc[(df_frutas[<span class="st">'preco'</span>] <span class="op">&gt;</span> <span class="dv">70</span>) <span class="op">&amp;</span> (df_frutas[<span class="st">'quantidade'</span>] <span class="op">&gt;</span> <span class="dv">15</span>)]</span>
 <span id="cb72-3"><a aria-label="3"></a>df_frutas.query(<span class="st">'preco &gt; 70 and quantidade &gt; 15'</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="query_comparando" class="cell-output cell-output-display" data-execution_count="275">
+<div id="query_comparando" class="cell-output cell-output-display" data-execution_count="113">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1766,7 +1766,7 @@ Name: 0, dtype: object</code></pre>
 <div id="cell-query-where" class="cell" data-execution_count="54">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a aria-label="1"></a><span class="co"># mantém condição; senão -&gt; NaN</span></span>
 <span id="cb73-2"><a aria-label="2"></a>df_frutas[<span class="st">'preco'</span>].where(df_frutas[<span class="st">'preco'</span>] <span class="op">&gt;</span> <span class="dv">50</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="query-where" class="cell-output cell-output-display" data-execution_count="276">
+<div id="query-where" class="cell-output cell-output-display" data-execution_count="114">
 <pre><code>0     80.0
 1    100.0
 2      NaN
@@ -1796,7 +1796,7 @@ Name: preco, dtype: float64</code></pre>
 <section id="novas-colunas" class="slide level2">
 <h2>Novas colunas</h2>
 <div id="cell-criando-colunas-1" class="cell" data-execution_count="55">
-<div id="criando-colunas-1" class="cell-output cell-output-display" data-execution_count="277">
+<div id="criando-colunas-1" class="cell-output cell-output-display" data-execution_count="115">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1948,14 +1948,471 @@ Name: preco, dtype: float64</code></pre>
 <span id="cb80-3"><a aria-label="3"></a>pivot <span class="op">=</span> df.pivot(columns<span class="op">=</span><span class="st">'frutas'</span>, values<span class="op">=</span>[<span class="st">'preco'</span>, <span class="st">'Quantity'</span>])  <span class="co"># tabela dinâmica</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
+<section id="filtrar-linhas-com-variavel" class="slide level2">
+<h2>filtrar linhas com variavel</h2>
+<div id="cell-df_vacinas-filtrar-com-variavel" class="cell" data-execution_count="62">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a aria-label="1"></a>vacinas <span class="op">=</span> df_vacinas[<span class="st">'vacina_fabricante'</span>].unique()</span>
+<span id="cb81-2"><a aria-label="2"></a>vacina_escolhida <span class="op">=</span> vacinas[<span class="dv">0</span>]</span>
+<span id="cb81-3"><a aria-label="3"></a>vacina_escolhida</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="df_vacinas-filtrar-com-variavel" class="cell-output cell-output-display" data-execution_count="116">
+<pre><code>'3 - COMIRNATY (PFIZER)'</code></pre>
+</div>
+</div>
+<div id="cell-df_vacinas-filtrar-com-variavel2" class="cell" data-execution_count="63">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a aria-label="1"></a>df_vacinas[df_vacinas[<span class="st">'vacina_fabricante'</span>] <span class="op">==</span> vacina_escolhida]</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="df_vacinas-filtrar-com-variavel2" class="cell-output cell-output-display" data-execution_count="117">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">faixa_etaria</th>
+<th data-quarto-table-cell-role="th">idade</th>
+<th data-quarto-table-cell-role="th">sexo</th>
+<th data-quarto-table-cell-role="th">raca_cor</th>
+<th data-quarto-table-cell-role="th">municipio</th>
+<th data-quarto-table-cell-role="th">grupo</th>
+<th data-quarto-table-cell-role="th">categoria</th>
+<th data-quarto-table-cell-role="th">lote</th>
+<th data-quarto-table-cell-role="th">vacina_fabricante</th>
+<th data-quarto-table-cell-role="th">descricao_dose</th>
+<th data-quarto-table-cell-role="th">cnes</th>
+<th data-quarto-table-cell-role="th">sistema_origem</th>
+<th data-quarto-table-cell-role="th">data_vacinacao</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>35 a 39 anos</td>
+<td>36.0</td>
+<td>FEMININO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>TRABALHADORES DA SAÚDE</td>
+<td>NaN</td>
+<td>FM2951</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BA...</td>
+<td>Conecta Recife</td>
+<td>2022-01-24 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>35 a 39 anos</td>
+<td>37.0</td>
+<td>MASCULINO</td>
+<td>BRANCA</td>
+<td>RECIFE</td>
+<td>PESSOAS COM COMORBIDADES</td>
+<td>PESSOAS COM OBESIDADE MÓRBIDA (IMC &gt; OU = 40)</td>
+<td>FK8911</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO</td>
+<td>Conecta Recife</td>
+<td>2022-01-11 00:00:00.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>20 a 24 anos</td>
+<td>20.0</td>
+<td>MASCULINO</td>
+<td>BRANCA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FL4222</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO</td>
+<td>Conecta Recife</td>
+<td>2022-01-08 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4</th>
+<td>25 a 29 anos</td>
+<td>26.0</td>
+<td>FEMININO</td>
+<td>BRANCA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FM2967</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 7: CNES: 0000647 - POLICLINICA CLEMENTINO F...</td>
+<td>Conecta Recife</td>
+<td>2022-02-01 00:00:00.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5</th>
+<td>30 a 34 anos</td>
+<td>31.0</td>
+<td>FEMININO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FM2967</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 6: CNES: 0001392 - MIGUEL DE LIMA VALVERDE.</td>
+<td>Conecta Recife</td>
+<td>2022-02-02 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1466336</th>
+<td>35 a 39 anos</td>
+<td>35.0</td>
+<td>MASCULINO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>OUTRAS</td>
+<td>FM2951</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO</td>
+<td>Conecta Recife</td>
+<td>2022-01-18 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1466337</th>
+<td>35 a 39 anos</td>
+<td>37.0</td>
+<td>MASCULINO</td>
+<td>PRETA</td>
+<td>RECIFE</td>
+<td>PESSOAS COM COMORBIDADES</td>
+<td>PESSOAS VIVENDO COM HIV</td>
+<td>FL4222</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER</td>
+<td>Conecta Recife</td>
+<td>2022-01-07 00:00:00.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1466339</th>
+<td>35 a 39 anos</td>
+<td>36.0</td>
+<td>FEMININO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>OUTRAS</td>
+<td>FM2951</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>2</td>
+<td>DS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER</td>
+<td>Conecta Recife</td>
+<td>2022-01-25 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1466341</th>
+<td>35 a 39 anos</td>
+<td>35.0</td>
+<td>FEMININO</td>
+<td>BRANCA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>OUTRAS</td>
+<td>FL4222</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BA...</td>
+<td>Conecta Recife</td>
+<td>2022-01-08 00:00:00.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1466342</th>
+<td>45 a 49 anos</td>
+<td>45.0</td>
+<td>MASCULINO</td>
+<td>BRANCA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FL4222</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER</td>
+<td>Conecta Recife</td>
+<td>2022-01-07 00:00:00.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>440468 rows × 13 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="cell-df_vacinas-filtrar-faixa_etaria_escolhida" class="cell" data-execution_count="64">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a aria-label="1"></a>faixa_etaria_escolhida <span class="op">=</span> [<span class="st">'20 a 24 anos'</span>, <span class="st">'25 a 29 anos'</span>, <span class="st">'30 a 34 anos'</span>,<span class="st">'45 a 49 anos'</span>]</span>
+<span id="cb84-2"><a aria-label="2"></a>df_vacinas[df_vacinas[<span class="st">'faixa_etaria'</span>].isin(faixa_etaria_escolhida)]</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="df_vacinas-filtrar-faixa_etaria_escolhida" class="cell-output cell-output-display" data-execution_count="118">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">faixa_etaria</th>
+<th data-quarto-table-cell-role="th">idade</th>
+<th data-quarto-table-cell-role="th">sexo</th>
+<th data-quarto-table-cell-role="th">raca_cor</th>
+<th data-quarto-table-cell-role="th">municipio</th>
+<th data-quarto-table-cell-role="th">grupo</th>
+<th data-quarto-table-cell-role="th">categoria</th>
+<th data-quarto-table-cell-role="th">lote</th>
+<th data-quarto-table-cell-role="th">vacina_fabricante</th>
+<th data-quarto-table-cell-role="th">descricao_dose</th>
+<th data-quarto-table-cell-role="th">cnes</th>
+<th data-quarto-table-cell-role="th">sistema_origem</th>
+<th data-quarto-table-cell-role="th">data_vacinacao</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>20 a 24 anos</td>
+<td>20.0</td>
+<td>MASCULINO</td>
+<td>BRANCA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FL4222</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO</td>
+<td>Conecta Recife</td>
+<td>2022-01-08 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4</th>
+<td>25 a 29 anos</td>
+<td>26.0</td>
+<td>FEMININO</td>
+<td>BRANCA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FM2967</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 7: CNES: 0000647 - POLICLINICA CLEMENTINO F...</td>
+<td>Conecta Recife</td>
+<td>2022-02-01 00:00:00.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5</th>
+<td>30 a 34 anos</td>
+<td>31.0</td>
+<td>FEMININO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FM2967</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 6: CNES: 0001392 - MIGUEL DE LIMA VALVERDE.</td>
+<td>Conecta Recife</td>
+<td>2022-02-02 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>45 a 49 anos</td>
+<td>47.0</td>
+<td>FEMININO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>201H21A</td>
+<td>4 - JANSSEN COVID-19 VACCINE (JOHNSON &amp; JOHNSON)</td>
+<td>1</td>
+<td>DS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO</td>
+<td>Conecta Recife</td>
+<td>2022-03-15 00:00:00.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">9</th>
+<td>45 a 49 anos</td>
+<td>45.0</td>
+<td>FEMININO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FM2951</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>2</td>
+<td>DS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BA...</td>
+<td>Conecta Recife</td>
+<td>2022-01-21 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1466315</th>
+<td>30 a 34 anos</td>
+<td>32.0</td>
+<td>FEMININO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>TRABALHADORES DA SAÚDE</td>
+<td>NaN</td>
+<td>FL4222</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 6: CNES: 0001392 - MIGUEL DE LIMA VALVERDE.</td>
+<td>Conecta Recife</td>
+<td>2022-01-12 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1466317</th>
+<td>45 a 49 anos</td>
+<td>45.0</td>
+<td>FEMININO</td>
+<td>PARDA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>205F21A</td>
+<td>4 - JANSSEN COVID-19 VACCINE (JOHNSON &amp; JOHNSON)</td>
+<td>3</td>
+<td>DS 8: CNES: 0001198 - UBT ARISTARCHO DE AZEVEDO</td>
+<td>Conecta Recife</td>
+<td>2022-03-07 00:00:00.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1466319</th>
+<td>45 a 49 anos</td>
+<td>46.0</td>
+<td>FEMININO</td>
+<td>AMARELA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FM2967</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>2</td>
+<td>DS 4: CNES: 0000639 - UBS JOAQUIM CAVALCANTE</td>
+<td>Conecta Recife</td>
+<td>2022-03-04 00:00:00.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1466326</th>
+<td>45 a 49 anos</td>
+<td>45.0</td>
+<td>FEMININO</td>
+<td>PRETA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FM2967</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 8: CNES: 0001198 - UBT ARISTARCHO DE AZEVEDO</td>
+<td>Conecta Recife</td>
+<td>2022-01-28 00:00:00.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1466342</th>
+<td>45 a 49 anos</td>
+<td>45.0</td>
+<td>MASCULINO</td>
+<td>BRANCA</td>
+<td>RECIFE</td>
+<td>PÚBLICO EM GERAL (18 a 59 anos)</td>
+<td>NaN</td>
+<td>FL4222</td>
+<td>3 - COMIRNATY (PFIZER)</td>
+<td>3</td>
+<td>DS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER</td>
+<td>Conecta Recife</td>
+<td>2022-01-07 00:00:00.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>415307 rows × 13 columns</p>
+</div>
+</div>
+</div>
+</section>
 <section id="method-chaining-o-problema-das-variáveis-temporárias" class="slide level2">
 <h2>Method chaining: o problema das variáveis temporárias</h2>
 <p>Na abertura da aula vimos o encadeamento com strings; aqui, o mesmo princípio num caso real do pandas. Ao aplicar uma sequência de transformações, é comum criar variáveis temporárias que só servem para o passo seguinte (McKinney, 2017, p.&nbsp;508):</p>
-<div id="chain-temp" class="cell" data-execution_count="62">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a aria-label="1"></a>df <span class="op">=</span> load_data()</span>
-<span id="cb81-2"><a aria-label="2"></a>df2 <span class="op">=</span> df[df[<span class="st">'col2'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb81-3"><a aria-label="3"></a>df2[<span class="st">'col1_demeaned'</span>] <span class="op">=</span> df2[<span class="st">'col1'</span>] <span class="op">-</span> df2[<span class="st">'col1'</span>].mean()</span>
-<span id="cb81-4"><a aria-label="4"></a>result <span class="op">=</span> df2.groupby(<span class="st">'key'</span>).col1_demeaned.std()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="chain-temp" class="cell" data-execution_count="65">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a aria-label="1"></a>df <span class="op">=</span> load_data()</span>
+<span id="cb85-2"><a aria-label="2"></a>df2 <span class="op">=</span> df[df[<span class="st">'col2'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb85-3"><a aria-label="3"></a>df2[<span class="st">'col1_demeaned'</span>] <span class="op">=</span> df2[<span class="st">'col1'</span>] <span class="op">-</span> df2[<span class="st">'col1'</span>].mean()</span>
+<span id="cb85-4"><a aria-label="4"></a>result <span class="op">=</span> df2.groupby(<span class="st">'key'</span>).col1_demeaned.std()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li class="fragment">O <code>assign()</code> é a alternativa <strong>funcional</strong>: em vez de modificar o objeto in-place, devolve um DataFrame novo — por isso “encaixa” numa cadeia de métodos (p.&nbsp;509):</li>
@@ -1965,13 +2422,13 @@ Name: preco, dtype: float64</code></pre>
 <section id="method-chaining-callables-lambda-dentro-da-cadeia" class="slide level2">
 <h2>Method chaining: callables (lambda) dentro da cadeia</h2>
 <p><code>assign</code>, <code>[]</code> e vários métodos do pandas aceitam <strong>funções</strong> (callables), que recebem o objeto da etapa anterior da cadeia (pp.&nbsp;509–510):</p>
-<div id="a86bfaf3" class="cell" data-execution_count="63">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb82-2"><a aria-label="2"></a>dfc <span class="op">=</span> pd.DataFrame({<span class="st">'key'</span>:  [<span class="st">'a'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>],</span>
-<span id="cb82-3"><a aria-label="3"></a>                    <span class="st">'col1'</span>: [<span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">10</span>],</span>
-<span id="cb82-4"><a aria-label="4"></a>                    <span class="st">'col2'</span>: [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">5</span>, <span class="op">-</span><span class="dv">8</span>, <span class="dv">1</span>]})</span>
-<span id="cb82-5"><a aria-label="5"></a>dfc</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="278">
+<div id="23277301" class="cell" data-execution_count="66">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb86-2"><a aria-label="2"></a>dfc <span class="op">=</span> pd.DataFrame({<span class="st">'key'</span>:  [<span class="st">'a'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>],</span>
+<span id="cb86-3"><a aria-label="3"></a>                    <span class="st">'col1'</span>: [<span class="dv">2</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">10</span>],</span>
+<span id="cb86-4"><a aria-label="4"></a>                    <span class="st">'col2'</span>: [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">5</span>, <span class="op">-</span><span class="dv">8</span>, <span class="dv">1</span>]})</span>
+<span id="cb86-5"><a aria-label="5"></a>dfc</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="119">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2033,14 +2490,14 @@ Name: preco, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-chain-cadeia" class="cell" data-execution_count="64">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a aria-label="1"></a><span class="co"># toda a sequência como uma única expressão encadeada:</span></span>
-<span id="cb83-2"><a aria-label="2"></a>result <span class="op">=</span> (dfc</span>
-<span id="cb83-3"><a aria-label="3"></a>          [<span class="kw">lambda</span> x: x[<span class="st">'col2'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]                                    <span class="co"># filtra linhas</span></span>
-<span id="cb83-4"><a aria-label="4"></a>          .assign(col1_demeaned<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="st">'col1'</span>] <span class="op">-</span> x[<span class="st">'col1'</span>].mean())</span>
-<span id="cb83-5"><a aria-label="5"></a>          .groupby(<span class="st">'key'</span>)[<span class="st">'col1_demeaned'</span>].std())                      <span class="co"># desvio-padrão por grupo</span></span>
-<span id="cb83-6"><a aria-label="6"></a>result</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="chain-cadeia" class="cell-output cell-output-display" data-execution_count="279">
+<div id="cell-chain-cadeia" class="cell" data-execution_count="67">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a aria-label="1"></a><span class="co"># toda a sequência como uma única expressão encadeada:</span></span>
+<span id="cb87-2"><a aria-label="2"></a>result <span class="op">=</span> (dfc</span>
+<span id="cb87-3"><a aria-label="3"></a>          [<span class="kw">lambda</span> x: x[<span class="st">'col2'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]                                    <span class="co"># filtra linhas</span></span>
+<span id="cb87-4"><a aria-label="4"></a>          .assign(col1_demeaned<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="st">'col1'</span>] <span class="op">-</span> x[<span class="st">'col1'</span>].mean())</span>
+<span id="cb87-5"><a aria-label="5"></a>          .groupby(<span class="st">'key'</span>)[<span class="st">'col1_demeaned'</span>].std())                      <span class="co"># desvio-padrão por grupo</span></span>
+<span id="cb87-6"><a aria-label="6"></a>result</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="chain-cadeia" class="cell-output cell-output-display" data-execution_count="120">
 <pre><code>key
 a    1.414214
 b    5.656854
@@ -2064,19 +2521,19 @@ Name: col1_demeaned, dtype: float64</code></pre>
 <section id="method-chaining-pipe" class="slide level2">
 <h2>Method chaining: pipe</h2>
 <p>Para incluir <strong>suas próprias funções</strong> (ou de bibliotecas de terceiros) na cadeia — funções que recebem e devolvem Series/DataFrame — use <code>pipe()</code> (pp.&nbsp;511–512):</p>
-<div id="cell-chain-pipe" class="cell" data-execution_count="65">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a aria-label="1"></a><span class="kw">def</span> group_demean(dframe, by, cols):</span>
-<span id="cb85-2"><a aria-label="2"></a>    <span class="co">"""Subtrai a média do grupo de cada coluna em cols."""</span></span>
-<span id="cb85-3"><a aria-label="3"></a>    result <span class="op">=</span> dframe.copy()</span>
-<span id="cb85-4"><a aria-label="4"></a>    g <span class="op">=</span> dframe.groupby(by)</span>
-<span id="cb85-5"><a aria-label="5"></a>    <span class="cf">for</span> c <span class="kw">in</span> cols:</span>
-<span id="cb85-6"><a aria-label="6"></a>        result[c] <span class="op">=</span> dframe[c] <span class="op">-</span> g[c].transform(<span class="st">'mean'</span>)</span>
-<span id="cb85-7"><a aria-label="7"></a>    <span class="cf">return</span> result</span>
-<span id="cb85-8"><a aria-label="8"></a></span>
-<span id="cb85-9"><a aria-label="9"></a>result <span class="op">=</span> (dfc[dfc[<span class="st">'col1'</span>] <span class="op">&gt;</span> <span class="dv">0</span>]</span>
-<span id="cb85-10"><a aria-label="10"></a>          .pipe(group_demean, [<span class="st">'key'</span>], [<span class="st">'col1'</span>]))</span>
-<span id="cb85-11"><a aria-label="11"></a>result</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="chain-pipe" class="cell-output cell-output-display" data-execution_count="280">
+<div id="cell-chain-pipe" class="cell" data-execution_count="68">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a aria-label="1"></a><span class="kw">def</span> group_demean(dframe, by, cols):</span>
+<span id="cb89-2"><a aria-label="2"></a>    <span class="co">"""Subtrai a média do grupo de cada coluna em cols."""</span></span>
+<span id="cb89-3"><a aria-label="3"></a>    result <span class="op">=</span> dframe.copy()</span>
+<span id="cb89-4"><a aria-label="4"></a>    g <span class="op">=</span> dframe.groupby(by)</span>
+<span id="cb89-5"><a aria-label="5"></a>    <span class="cf">for</span> c <span class="kw">in</span> cols:</span>
+<span id="cb89-6"><a aria-label="6"></a>        result[c] <span class="op">=</span> dframe[c] <span class="op">-</span> g[c].transform(<span class="st">'mean'</span>)</span>
+<span id="cb89-7"><a aria-label="7"></a>    <span class="cf">return</span> result</span>
+<span id="cb89-8"><a aria-label="8"></a></span>
+<span id="cb89-9"><a aria-label="9"></a>result <span class="op">=</span> (dfc[dfc[<span class="st">'col1'</span>] <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb89-10"><a aria-label="10"></a>          .pipe(group_demean, [<span class="st">'key'</span>], [<span class="st">'col1'</span>]))</span>
+<span id="cb89-11"><a aria-label="11"></a>result</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="chain-pipe" class="cell-output cell-output-display" data-execution_count="121">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2140,11 +2597,11 @@ Name: col1_demeaned, dtype: float64</code></pre>
 </section>
 <section id="merge-junções-estilo-banco-de-dados" class="slide level2">
 <h2>Merge (junções estilo banco de dados)</h2>
-<div id="merge" class="cell" data-execution_count="66">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a aria-label="1"></a>pd.merge(df1, df2, how<span class="op">=</span><span class="st">'left'</span>,  on<span class="op">=</span><span class="st">'frutas'</span>)</span>
-<span id="cb86-2"><a aria-label="2"></a>pd.merge(df1, df2, how<span class="op">=</span><span class="st">'right'</span>, on<span class="op">=</span><span class="st">'frutas'</span>)</span>
-<span id="cb86-3"><a aria-label="3"></a>pd.merge(df1, df2, how<span class="op">=</span><span class="st">'inner'</span>, on<span class="op">=</span><span class="st">'frutas'</span>)</span>
-<span id="cb86-4"><a aria-label="4"></a>pd.merge(df1, df2, how<span class="op">=</span><span class="st">'outer'</span>, on<span class="op">=</span><span class="st">'frutas'</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="merge" class="cell" data-execution_count="69">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a aria-label="1"></a>pd.merge(df1, df2, how<span class="op">=</span><span class="st">'left'</span>,  on<span class="op">=</span><span class="st">'frutas'</span>)</span>
+<span id="cb90-2"><a aria-label="2"></a>pd.merge(df1, df2, how<span class="op">=</span><span class="st">'right'</span>, on<span class="op">=</span><span class="st">'frutas'</span>)</span>
+<span id="cb90-3"><a aria-label="3"></a>pd.merge(df1, df2, how<span class="op">=</span><span class="st">'inner'</span>, on<span class="op">=</span><span class="st">'frutas'</span>)</span>
+<span id="cb90-4"><a aria-label="4"></a>pd.merge(df1, df2, how<span class="op">=</span><span class="st">'outer'</span>, on<span class="op">=</span><span class="st">'frutas'</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -2162,9 +2619,9 @@ Name: col1_demeaned, dtype: float64</code></pre>
 </section>
 <section id="concatenando" class="slide level2">
 <h2>Concatenando</h2>
-<div id="concat" class="cell" data-execution_count="67">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a aria-label="1"></a>pd.concat([df, df1], axis<span class="op">=</span><span class="dv">0</span>, ignore_index<span class="op">=</span><span class="va">True</span>)  <span class="co"># empilha linhas</span></span>
-<span id="cb87-2"><a aria-label="2"></a>pd.concat([df, df2], axis<span class="op">=</span><span class="dv">1</span>)                     <span class="co"># acrescenta colunas</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="concat" class="cell" data-execution_count="70">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a aria-label="1"></a>pd.concat([df, df1], axis<span class="op">=</span><span class="dv">0</span>, ignore_index<span class="op">=</span><span class="va">True</span>)  <span class="co"># empilha linhas</span></span>
+<span id="cb91-2"><a aria-label="2"></a>pd.concat([df, df2], axis<span class="op">=</span><span class="dv">1</span>)                     <span class="co"># acrescenta colunas</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
@@ -2174,10 +2631,10 @@ Name: col1_demeaned, dtype: float64</code></pre>
 </section>
 <section id="valores-únicos-e-frequências" class="slide level2">
 <h2>Valores únicos e frequências</h2>
-<div id="cell-unique" class="cell" data-execution_count="68">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a aria-label="1"></a>df_frutas[<span class="st">'frutas'</span>].unique()        <span class="co"># lista de valores distintos</span></span>
-<span id="cb88-2"><a aria-label="2"></a>df_frutas[<span class="st">'frutas'</span>].value_counts()  <span class="co"># contagem de cada valor</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="unique" class="cell-output cell-output-display" data-execution_count="281">
+<div id="cell-unique" class="cell" data-execution_count="71">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a aria-label="1"></a>df_frutas[<span class="st">'frutas'</span>].unique()        <span class="co"># lista de valores distintos</span></span>
+<span id="cb92-2"><a aria-label="2"></a>df_frutas[<span class="st">'frutas'</span>].value_counts()  <span class="co"># contagem de cada valor</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="unique" class="cell-output cell-output-display" data-execution_count="122">
 <pre><code>frutas
 Manga      1
 Maçã       1
@@ -2189,9 +2646,9 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="resumo-com-describe" class="slide level2">
 <h2>Resumo com describe</h2>
-<div id="cell-pd.describe" class="cell" data-execution_count="69">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a aria-label="1"></a>df_frutas.describe()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="pd.describe" class="cell-output cell-output-display" data-execution_count="282">
+<div id="cell-pd.describe" class="cell" data-execution_count="72">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a aria-label="1"></a>df_frutas.describe()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="pd.describe" class="cell-output cell-output-display" data-execution_count="123">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2271,9 +2728,9 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-describe-obj" class="cell" data-execution_count="70">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a aria-label="1"></a>df_frutas.describe(include<span class="op">=</span>[<span class="st">'O'</span>])   <span class="co"># estatísticas das colunas de texto (objects)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="describe-obj" class="cell-output cell-output-display" data-execution_count="283">
+<div id="cell-describe-obj" class="cell" data-execution_count="73">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb95-1"><a aria-label="1"></a>df_frutas.describe(include<span class="op">=</span>[<span class="st">'O'</span>])   <span class="co"># estatísticas das colunas de texto (objects)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="describe-obj" class="cell-output cell-output-display" data-execution_count="124">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2322,22 +2779,22 @@ Name: count, dtype: int64</code></pre>
 </section>
 <section id="estatísticas-por-coluna" class="slide level2">
 <h2>Estatísticas por coluna</h2>
-<div id="cell-df_stats" class="cell" data-execution_count="71">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a aria-label="1"></a>df_frutas[<span class="st">'preco'</span>].<span class="bu">sum</span>()  <span class="co"># soma</span></span>
-<span id="cb92-2"><a aria-label="2"></a>df_frutas[<span class="st">'preco'</span>].mean()  <span class="co"># média</span></span>
-<span id="cb92-3"><a aria-label="3"></a>df_frutas[<span class="st">'preco'</span>].median()  <span class="co"># mediana</span></span>
-<span id="cb92-4"><a aria-label="4"></a>df_frutas[<span class="st">'preco'</span>].var()  <span class="co"># variância</span></span>
-<span id="cb92-5"><a aria-label="5"></a>df_frutas[<span class="st">'preco'</span>].std()  <span class="co"># desvio-padrão / standard deviation</span></span>
-<span id="cb92-6"><a aria-label="6"></a>df_frutas[<span class="st">'preco'</span>].quantile([<span class="fl">0.25</span>, <span class="fl">0.75</span>])  <span class="co"># quartis</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="df_stats" class="cell-output cell-output-display" data-execution_count="284">
+<div id="cell-df_stats" class="cell" data-execution_count="74">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a aria-label="1"></a>df_frutas[<span class="st">'preco'</span>].<span class="bu">sum</span>()  <span class="co"># soma</span></span>
+<span id="cb96-2"><a aria-label="2"></a>df_frutas[<span class="st">'preco'</span>].mean()  <span class="co"># média</span></span>
+<span id="cb96-3"><a aria-label="3"></a>df_frutas[<span class="st">'preco'</span>].median()  <span class="co"># mediana</span></span>
+<span id="cb96-4"><a aria-label="4"></a>df_frutas[<span class="st">'preco'</span>].var()  <span class="co"># variância</span></span>
+<span id="cb96-5"><a aria-label="5"></a>df_frutas[<span class="st">'preco'</span>].std()  <span class="co"># desvio-padrão / standard deviation</span></span>
+<span id="cb96-6"><a aria-label="6"></a>df_frutas[<span class="st">'preco'</span>].quantile([<span class="fl">0.25</span>, <span class="fl">0.75</span>])  <span class="co"># quartis</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="df_stats" class="cell-output cell-output-display" data-execution_count="125">
 <pre><code>0.25    65.0
 0.75    85.0
 Name: preco, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-cumsum" class="cell" data-execution_count="72">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a aria-label="1"></a>df_frutas[<span class="st">'preco'</span>].cumsum()  <span class="co"># soma acumulada</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="cumsum" class="cell-output cell-output-display" data-execution_count="285">
+<div id="cell-cumsum" class="cell" data-execution_count="75">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a aria-label="1"></a>df_frutas[<span class="st">'preco'</span>].cumsum()  <span class="co"># soma acumulada</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="cumsum" class="cell-output cell-output-display" data-execution_count="126">
 <pre><code>0     80
 1    180
 2    230
@@ -2348,10 +2805,10 @@ Name: preco, dtype: int64</code></pre>
 </section>
 <section id="correlação-e-covariância" class="slide level2">
 <h2>Correlação e covariância</h2>
-<div id="cell-corr-cov" class="cell" data-execution_count="73">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a aria-label="1"></a>df_frutas.corr(numeric_only<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb96-2"><a aria-label="2"></a>df_frutas.cov(numeric_only<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="corr-cov" class="cell-output cell-output-display" data-execution_count="286">
+<div id="cell-corr-cov" class="cell" data-execution_count="76">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a aria-label="1"></a>df_frutas.corr(numeric_only<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb100-2"><a aria-label="2"></a>df_frutas.cov(numeric_only<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="corr-cov" class="cell-output cell-output-display" data-execution_count="127">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2409,24 +2866,24 @@ Name: preco, dtype: int64</code></pre>
 </section>
 <section id="detectando" class="slide level2">
 <h2>Detectando</h2>
-<div id="isnull" class="cell" data-execution_count="74">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb97"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb97-1"><a aria-label="1"></a>df.isnull()          <span class="co"># True onde está faltando</span></span>
-<span id="cb97-2"><a aria-label="2"></a>df.isnull().<span class="bu">sum</span>()    <span class="co"># contagem de faltantes por coluna</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="isnull" class="cell" data-execution_count="77">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb101"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb101-1"><a aria-label="1"></a>df.isnull()          <span class="co"># True onde está faltando</span></span>
+<span id="cb101-2"><a aria-label="2"></a>df.isnull().<span class="bu">sum</span>()    <span class="co"># contagem de faltantes por coluna</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="tratando-fillna-e-dropna" class="slide level2">
 <h2>Tratando: fillna e dropna</h2>
-<div id="cell-fillna-dropna" class="cell" data-execution_count="75">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a aria-label="1"></a>df_com_nulo <span class="op">=</span> df.copy()</span>
-<span id="cb98-2"><a aria-label="2"></a>df_com_nulo.loc[<span class="dv">0</span>, <span class="st">'Price'</span>] <span class="op">=</span> pd.NA        <span class="co"># simula um valor ausente</span></span>
-<span id="cb98-3"><a aria-label="3"></a>df_com_nulo[<span class="st">'Price'</span>].isnull().<span class="bu">sum</span>()        <span class="co"># 1 valor ausente</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fillna-dropna" class="cell-output cell-output-display" data-execution_count="287">
+<div id="cell-fillna-dropna" class="cell" data-execution_count="78">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a aria-label="1"></a>df_com_nulo <span class="op">=</span> df.copy()</span>
+<span id="cb102-2"><a aria-label="2"></a>df_com_nulo.loc[<span class="dv">0</span>, <span class="st">'Price'</span>] <span class="op">=</span> pd.NA        <span class="co"># simula um valor ausente</span></span>
+<span id="cb102-3"><a aria-label="3"></a>df_com_nulo[<span class="st">'Price'</span>].isnull().<span class="bu">sum</span>()        <span class="co"># 1 valor ausente</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fillna-dropna" class="cell-output cell-output-display" data-execution_count="128">
 <pre><code>np.int64(7)</code></pre>
 </div>
 </div>
-<div id="cell-fillna-preencher" class="cell" data-execution_count="76">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a aria-label="1"></a>df_com_nulo[<span class="st">'Price'</span>].fillna(value<span class="op">=</span><span class="dv">0</span>)                 <span class="co"># preencher com 0</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fillna-preencher" class="cell-output cell-output-display" data-execution_count="288">
+<div id="cell-fillna-preencher" class="cell" data-execution_count="79">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a aria-label="1"></a>df_com_nulo[<span class="st">'Price'</span>].fillna(value<span class="op">=</span><span class="dv">0</span>)                 <span class="co"># preencher com 0</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fillna-preencher" class="cell-output cell-output-display" data-execution_count="129">
 <pre><code>0    0
 1    0
 2    0
@@ -2437,11 +2894,11 @@ Name: preco, dtype: int64</code></pre>
 Name: Price, dtype: int64</code></pre>
 </div>
 </div>
-<div id="cell-fillna-media" class="cell" data-execution_count="77">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a aria-label="1"></a>df_com_nulo[<span class="st">'Price'</span>] <span class="op">=</span> df_com_nulo[<span class="st">'Price'</span>].fillna(</span>
-<span id="cb102-2"><a aria-label="2"></a>    df_com_nulo[<span class="st">'Price'</span>].mean())                     <span class="co"># preencher com a média</span></span>
-<span id="cb102-3"><a aria-label="3"></a>df_com_nulo[<span class="st">'Price'</span>]</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fillna-media" class="cell-output cell-output-display" data-execution_count="289">
+<div id="cell-fillna-media" class="cell" data-execution_count="80">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a aria-label="1"></a>df_com_nulo[<span class="st">'Price'</span>] <span class="op">=</span> df_com_nulo[<span class="st">'Price'</span>].fillna(</span>
+<span id="cb106-2"><a aria-label="2"></a>    df_com_nulo[<span class="st">'Price'</span>].mean())                     <span class="co"># preencher com a média</span></span>
+<span id="cb106-3"><a aria-label="3"></a>df_com_nulo[<span class="st">'Price'</span>]</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fillna-media" class="cell-output cell-output-display" data-execution_count="130">
 <pre><code>0   NaN
 1   NaN
 2   NaN
@@ -2452,9 +2909,9 @@ Name: Price, dtype: int64</code></pre>
 Name: Price, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-dropna" class="cell" data-execution_count="78">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a aria-label="1"></a>df_com_nulo.dropna()                                 <span class="co"># remover linhas com NaN</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="dropna" class="cell-output cell-output-display" data-execution_count="290">
+<div id="cell-dropna" class="cell" data-execution_count="81">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb108-1"><a aria-label="1"></a>df_com_nulo.dropna()                                 <span class="co"># remover linhas com NaN</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="dropna" class="cell-output cell-output-display" data-execution_count="131">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2507,11 +2964,99 @@ Name: Price, dtype: float64</code></pre>
 <h1>Parte 10 — Agrupando (groupby)</h1>
 
 </section>
-<section id="divide-aplica-combina" class="slide level2">
-<h2>Divide-aplica-combina</h2>
-<div id="groupby" class="cell" data-execution_count="79">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb105-1"><a aria-label="1"></a>grouped <span class="op">=</span> df.groupby(by<span class="op">=</span><span class="st">'Fruits'</span>)          <span class="co"># agrupa pelo valor da coluna</span></span>
-<span id="cb105-2"><a aria-label="2"></a>grouped[<span class="st">'Price'</span>].agg([<span class="st">'count'</span>, <span class="st">'sum'</span>, <span class="st">'mean'</span>])</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="groupby" class="slide level2">
+<h2>groupby</h2>
+<p>A função groupby agrupa/agrega os dados de uma variável e aplica algum cálculo para cada item desta categoria agrupada.</p>
+<div id="cell-groupby-vacinas" class="cell" data-execution_count="82">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a aria-label="1"></a><span class="co"># média de idades por sexo</span></span>
+<span id="cb109-2"><a aria-label="2"></a>df_vacinas.groupby(<span class="st">'sexo'</span>)[<span class="st">'idade'</span>].mean()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="groupby-vacinas" class="cell-output cell-output-display" data-execution_count="132">
+<pre><code>sexo
+FEMININO     40.247596
+MASCULINO    36.426745
+OUTROS       39.004808
+Name: idade, dtype: float64</code></pre>
+</div>
+</div>
+<div id="cell-groupby-vacinas-mean-reound" class="cell" data-execution_count="83">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a aria-label="1"></a><span class="co"># arredondando o valor com round</span></span>
+<span id="cb111-2"><a aria-label="2"></a>df_vacinas.groupby(<span class="st">'sexo'</span>)[<span class="st">'idade'</span>].mean().<span class="bu">round</span>(<span class="dv">2</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="groupby-vacinas-mean-reound" class="cell-output cell-output-display" data-execution_count="133">
+<pre><code>sexo
+FEMININO     40.25
+MASCULINO    36.43
+OUTROS       39.00
+Name: idade, dtype: float64</code></pre>
+</div>
+</div>
+<div id="cell-groupby-vacinas-agg" class="cell" data-execution_count="84">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a aria-label="1"></a><span class="co"># groupby com múltiplas estatísticas:</span></span>
+<span id="cb113-2"><a aria-label="2"></a>df_vacinas.groupby(<span class="st">'sexo'</span>)[<span class="st">'idade'</span>].agg([<span class="st">'mean'</span>, <span class="st">'median'</span>, <span class="st">'count'</span>, <span class="st">'min'</span>, <span class="st">'max'</span>])</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="groupby-vacinas-agg" class="cell-output cell-output-display" data-execution_count="134">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">median</th>
+<th data-quarto-table-cell-role="th">count</th>
+<th data-quarto-table-cell-role="th">min</th>
+<th data-quarto-table-cell-role="th">max</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">sexo</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">FEMININO</th>
+<td>40.247596</td>
+<td>41.0</td>
+<td>821446</td>
+<td>0.0</td>
+<td>118.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">MASCULINO</th>
+<td>36.426745</td>
+<td>37.0</td>
+<td>642772</td>
+<td>-952.0</td>
+<td>118.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">OUTROS</th>
+<td>39.004808</td>
+<td>37.0</td>
+<td>2080</td>
+<td>0.0</td>
+<td>102.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -2534,11 +3079,11 @@ Name: Price, dtype: float64</code></pre>
 </section>
 <section id="gráficos-com-o-próprio-dataframe" class="slide level2">
 <h2>Gráficos com o próprio DataFrame</h2>
-<div id="plots" class="cell" data-execution_count="80">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a aria-label="1"></a>df_frutas.plot.bar(x<span class="op">=</span><span class="st">'frutas'</span>, y<span class="op">=</span>[<span class="st">'quantidade'</span>, <span class="st">'preco'</span>])   <span class="co"># barras</span></span>
-<span id="cb106-2"><a aria-label="2"></a>df_frutas[<span class="st">'quantidade'</span>].plot.hist(bins<span class="op">=</span><span class="dv">3</span>)                   <span class="co"># histograma</span></span>
-<span id="cb106-3"><a aria-label="3"></a>df_frutas.plot.scatter(x<span class="op">=</span><span class="st">'preco'</span>, y<span class="op">=</span><span class="st">'preco_pago'</span>)         <span class="co"># dispersão</span></span>
-<span id="cb106-4"><a aria-label="4"></a>df_frutas.boxplot(column<span class="op">=</span><span class="st">'preco'</span>, grid<span class="op">=</span><span class="va">False</span>)             <span class="co"># box-plot (outliers)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="plots" class="cell" data-execution_count="85">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb114-1"><a aria-label="1"></a>df_frutas.plot.bar(x<span class="op">=</span><span class="st">'frutas'</span>, y<span class="op">=</span>[<span class="st">'quantidade'</span>, <span class="st">'preco'</span>])   <span class="co"># barras</span></span>
+<span id="cb114-2"><a aria-label="2"></a>df_frutas[<span class="st">'quantidade'</span>].plot.hist(bins<span class="op">=</span><span class="dv">3</span>)                   <span class="co"># histograma</span></span>
+<span id="cb114-3"><a aria-label="3"></a>df_frutas.plot.scatter(x<span class="op">=</span><span class="st">'preco'</span>, y<span class="op">=</span><span class="st">'preco_pago'</span>)         <span class="co"># dispersão</span></span>
+<span id="cb114-4"><a aria-label="4"></a>df_frutas.boxplot(column<span class="op">=</span><span class="st">'preco'</span>, grid<span class="op">=</span><span class="va">False</span>)             <span class="co"># box-plot (outliers)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -2554,10 +3099,10 @@ Name: Price, dtype: float64</code></pre>
 </div>
 </div>
 </div>
-<div id="plot-pie" class="cell" data-execution_count="81">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb107-1"><a aria-label="1"></a>grouped <span class="op">=</span> df_frutas.groupby(<span class="st">'frutas'</span>).<span class="bu">sum</span>()</span>
-<span id="cb107-2"><a aria-label="2"></a>grouped.plot.pie(y<span class="op">=</span><span class="st">'quantidade'</span>, subplots<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="plot-pie-1" class="cell-output cell-output-display" data-execution_count="292">
+<div id="plot-pie" class="cell" data-execution_count="86">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a aria-label="1"></a>grouped <span class="op">=</span> df_frutas.groupby(<span class="st">'frutas'</span>).<span class="bu">sum</span>()</span>
+<span id="cb115-2"><a aria-label="2"></a>grouped.plot.pie(y<span class="op">=</span><span class="st">'quantidade'</span>, subplots<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="plot-pie-1" class="cell-output cell-output-display" data-execution_count="136">
 <pre><code>array([&lt;Axes: ylabel='quantidade'&gt;], dtype=object)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -2580,10 +3125,10 @@ Name: Price, dtype: float64</code></pre>
 <p><em>Method chaining</em> (encadeamento de métodos) é chamar vários métodos em sequência sobre o mesmo objeto, numa única expressão: o resultado de cada método vira o objeto sobre o qual o método seguinte opera. (Adaptado de <em>Method Chaining in Python</em>, GeeksforGeeks, 2025.)</p>
 </blockquote>
 <p>Não é exclusividade do pandas — funciona com strings, listas e qualquer método que devolva um objeto:</p>
-<div id="chain-strings" class="cell" data-execution_count="82">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a aria-label="1"></a>text <span class="op">=</span> <span class="st">" Olá, gfg! "</span></span>
-<span id="cb109-2"><a aria-label="2"></a>result <span class="op">=</span> text.strip().capitalize().replace(<span class="st">"gfg"</span>, <span class="st">"Mundo!"</span>)</span>
-<span id="cb109-3"><a aria-label="3"></a><span class="bu">print</span>(result)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="chain-strings" class="cell" data-execution_count="87">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb117-1"><a aria-label="1"></a>text <span class="op">=</span> <span class="st">" Olá, gfg! "</span></span>
+<span id="cb117-2"><a aria-label="2"></a>result <span class="op">=</span> text.strip().capitalize().replace(<span class="st">"gfg"</span>, <span class="st">"Mundo!"</span>)</span>
+<span id="cb117-3"><a aria-label="3"></a><span class="bu">print</span>(result)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Olá, Mundo!!</code></pre>
 </div>
@@ -2595,15 +3140,15 @@ Name: Price, dtype: float64</code></pre>
 <section id="como-funciona" class="slide level2">
 <h2>Como funciona</h2>
 <p>Cada método da cadeia precisa <strong>devolver um objeto</strong>: métodos que devolvem <code>None</code> (como <code>list.sort()</code>) quebram a cadeia.</p>
-<div id="chain-passos" class="cell" data-execution_count="83">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a aria-label="1"></a><span class="co"># passo a passo:</span></span>
-<span id="cb111-2"><a aria-label="2"></a>result <span class="op">=</span> obj.method1()</span>
-<span id="cb111-3"><a aria-label="3"></a>result <span class="op">=</span> result.method2()</span>
-<span id="cb111-4"><a aria-label="4"></a>result <span class="op">=</span> result.method3()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="chain-passos" class="cell" data-execution_count="88">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb119-1"><a aria-label="1"></a><span class="co"># passo a passo:</span></span>
+<span id="cb119-2"><a aria-label="2"></a>result <span class="op">=</span> obj.method1()</span>
+<span id="cb119-3"><a aria-label="3"></a>result <span class="op">=</span> result.method2()</span>
+<span id="cb119-4"><a aria-label="4"></a>result <span class="op">=</span> result.method3()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>equivale a:</p>
-<div id="chain-sequencial" class="cell" data-execution_count="84">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb112-1"><a aria-label="1"></a>result <span class="op">=</span> obj.method1().method2().method3()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="chain-sequencial" class="cell" data-execution_count="89">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb120-1"><a aria-label="1"></a>result <span class="op">=</span> obj.method1().method2().method3()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="cuidados" class="slide level2">
@@ -2641,23 +3186,23 @@ Name: Price, dtype: float64</code></pre>
 </section>
 <section id="a-anatomia-de-uma-classe" class="slide level2">
 <h2>A anatomia de uma classe</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb113"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a aria-label="1"></a><span class="kw">class</span> Estudante:</span>
-<span id="cb113-2"><a aria-label="2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nome, nota):     <span class="co"># construção do objeto</span></span>
-<span id="cb113-3"><a aria-label="3"></a>        <span class="va">self</span>.nome <span class="op">=</span> nome                <span class="co"># atributos: dados guardados no objeto</span></span>
-<span id="cb113-4"><a aria-label="4"></a>        <span class="va">self</span>.nota <span class="op">=</span> nota</span>
-<span id="cb113-5"><a aria-label="5"></a></span>
-<span id="cb113-6"><a aria-label="6"></a>    <span class="kw">def</span> aprovado(<span class="va">self</span>):                 <span class="co"># método: função do objeto</span></span>
-<span id="cb113-7"><a aria-label="7"></a>        <span class="cf">return</span> <span class="va">self</span>.nota <span class="op">&gt;=</span> <span class="dv">7</span></span>
-<span id="cb113-8"><a aria-label="8"></a></span>
-<span id="cb113-9"><a aria-label="9"></a>s <span class="op">=</span> Estudante(<span class="st">'Ana'</span>, <span class="fl">8.5</span>)</span>
-<span id="cb113-10"><a aria-label="10"></a>s.nome         <span class="co"># 'Ana'      &lt;- atributo (sem parênteses)</span></span>
-<span id="cb113-11"><a aria-label="11"></a>s.aprovado()   <span class="co"># True       &lt;- método (com parênteses)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb121"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb121-1"><a aria-label="1"></a><span class="kw">class</span> Estudante:</span>
+<span id="cb121-2"><a aria-label="2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nome, nota):     <span class="co"># construção do objeto</span></span>
+<span id="cb121-3"><a aria-label="3"></a>        <span class="va">self</span>.nome <span class="op">=</span> nome                <span class="co"># atributos: dados guardados no objeto</span></span>
+<span id="cb121-4"><a aria-label="4"></a>        <span class="va">self</span>.nota <span class="op">=</span> nota</span>
+<span id="cb121-5"><a aria-label="5"></a></span>
+<span id="cb121-6"><a aria-label="6"></a>    <span class="kw">def</span> aprovado(<span class="va">self</span>):                 <span class="co"># método: função do objeto</span></span>
+<span id="cb121-7"><a aria-label="7"></a>        <span class="cf">return</span> <span class="va">self</span>.nota <span class="op">&gt;=</span> <span class="dv">7</span></span>
+<span id="cb121-8"><a aria-label="8"></a></span>
+<span id="cb121-9"><a aria-label="9"></a>s <span class="op">=</span> Estudante(<span class="st">'Ana'</span>, <span class="fl">8.5</span>)</span>
+<span id="cb121-10"><a aria-label="10"></a>s.nome         <span class="co"># 'Ana'      &lt;- atributo (sem parênteses)</span></span>
+<span id="cb121-11"><a aria-label="11"></a>s.aprovado()   <span class="co"># True       &lt;- método (com parênteses)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li class="fragment"><code>class</code> define o molde; <code>__init__</code> executa ao criar o objeto.</li>
 <li class="fragment"><code>self</code> é o próprio objeto passando “por dentro” de cada método.</li>
 <li class="fragment"><strong>Atributo</strong> = dado guardado; <strong>método</strong> = função associada.</li>
 </ul>
-<div id="apx-classe" class="cell" data-execution_count="85">
+<div id="apx-classe" class="cell" data-execution_count="90">
 <div class="cell-output cell-output-stdout">
 <pre><code>Ana -&gt; True</code></pre>
 </div>
@@ -2665,9 +3210,9 @@ Name: Price, dtype: float64</code></pre>
 </section>
 <section id="classes-que-você-já-usou-sem-saber" class="slide level2">
 <h2>Classes que você já usou sem saber</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb115"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a aria-label="1"></a><span class="bu">type</span>(df)          <span class="co"># &lt;class 'pandas.core.frame.DataFrame'&gt;</span></span>
-<span id="cb115-2"><a aria-label="2"></a><span class="bu">dict</span>.fromkeys     <span class="co"># método de classe</span></span>
-<span id="cb115-3"><a aria-label="3"></a>s.upper()         <span class="co"># método do objeto str</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb123"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb123-1"><a aria-label="1"></a><span class="bu">type</span>(df)          <span class="co"># &lt;class 'pandas.core.frame.DataFrame'&gt;</span></span>
+<span id="cb123-2"><a aria-label="2"></a><span class="bu">dict</span>.fromkeys     <span class="co"># método de classe</span></span>
+<span id="cb123-3"><a aria-label="3"></a>s.upper()         <span class="co"># método do objeto str</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li class="fragment"><code>'texto'.upper()</code>, <code>df.describe()</code>, <code>plt.figure()</code>: tudo método de objetos criados por classes.</li>
 <li class="fragment">Até os tipos escalares são classes: <code>type(5) -&gt; &lt;class 'int'&gt;</code>.</li>
@@ -2697,15 +3242,15 @@ Name: Price, dtype: float64</code></pre>
 </section>
 <section id="e-o-return-self-ponte-para-a-aula-04" class="slide level2">
 <h2>E o <code>return self</code>? (ponte para a aula 04)</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb116"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb116-1"><a aria-label="1"></a><span class="kw">class</span> Carrinho:</span>
-<span id="cb116-2"><a aria-label="2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb116-3"><a aria-label="3"></a>        <span class="va">self</span>.itens <span class="op">=</span> []</span>
-<span id="cb116-4"><a aria-label="4"></a></span>
-<span id="cb116-5"><a aria-label="5"></a>    <span class="kw">def</span> add(<span class="va">self</span>, item):</span>
-<span id="cb116-6"><a aria-label="6"></a>        <span class="va">self</span>.itens.append(item)</span>
-<span id="cb116-7"><a aria-label="7"></a>        <span class="cf">return</span> <span class="va">self</span>     <span class="co"># devolve o próprio objeto!</span></span>
-<span id="cb116-8"><a aria-label="8"></a></span>
-<span id="cb116-9"><a aria-label="9"></a>cart <span class="op">=</span> Carrinho().add(<span class="st">'banana'</span>).add(<span class="st">'maçã'</span>).add(<span class="st">'uva'</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb124"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb124-1"><a aria-label="1"></a><span class="kw">class</span> Carrinho:</span>
+<span id="cb124-2"><a aria-label="2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb124-3"><a aria-label="3"></a>        <span class="va">self</span>.itens <span class="op">=</span> []</span>
+<span id="cb124-4"><a aria-label="4"></a></span>
+<span id="cb124-5"><a aria-label="5"></a>    <span class="kw">def</span> add(<span class="va">self</span>, item):</span>
+<span id="cb124-6"><a aria-label="6"></a>        <span class="va">self</span>.itens.append(item)</span>
+<span id="cb124-7"><a aria-label="7"></a>        <span class="cf">return</span> <span class="va">self</span>     <span class="co"># devolve o próprio objeto!</span></span>
+<span id="cb124-8"><a aria-label="8"></a></span>
+<span id="cb124-9"><a aria-label="9"></a>cart <span class="op">=</span> Carrinho().add(<span class="st">'banana'</span>).add(<span class="st">'maçã'</span>).add(<span class="st">'uva'</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li class="fragment">Quando um método devolve <code>self</code>, dá para <strong>encadear</strong>: <code>obj.a().b().c()</code>.</li>
 <li class="fragment">É assim que o method chaining do pandas funciona — assunto da próxima aula.</li>
