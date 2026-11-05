@@ -39,7 +39,7 @@
     "href": "index.html#por-que-o-pandas-resolve-o-problema",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Por que o pandas resolve o problema?",
-    "text": "Por que o pandas resolve o problema?\n\n“… a principal diferença é que o pandas foi projetado para trabalhar com dados tabulares e heterogêneos. O NumPy, em comparação, é mais apropriado para trabalhar com dados numéricos homogêneos em arrays.” (McKinney, 2017, p. 185)\n\n\nNumPy: rápido, mas assume números de um tipo só (matrizes).\npandas: colunas com tipos diferentes (texto, número, data…) numa mesma tabela."
+    "text": "Por que o pandas resolve o problema?\n\n“… a principal diferença é que o pandas foi projetado para trabalhar com dados tabulares e heterogêneos. O NumPy, em comparação, é mais apropriado para trabalhar com dados numéricos homogêneos em arrays.” (McKinney, 2017, p. 185)\n\n\n\npandas: colunas com tipos diferentes (texto, número, data…) numa mesma tabela."
   },
   {
     "objectID": "index.html#o-nome-pandas",
@@ -53,7 +53,7 @@
     "href": "index.html#instalação-e-importação",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Instalação e importação",
-    "text": "Instalação e importação\n\nimport pandas as pd\n\nprint(pd.__version__)\n\n2.3.3\n\n\n\n\n\n\n\n\nDica\n\n\nNo Google Colab o pandas já vem instalado.\nEm ambiente local, para instalá-lo: pip install pandas"
+    "text": "Instalação e importação\n\nimport pandas as pd\n\nprint(pd.__version__)\n\n2.3.3\n\n\n\n\n\n\n\n\nDica\n\n\nNo Google Colab o pandas já vem instalado.\nEm ambiente local (no seu computador pessoal), caso já tenha Python instalado, para instalá-lo: pip install pandas"
   },
   {
     "objectID": "index.html#lendo-dados-de-arquivos",
@@ -67,7 +67,7 @@
     "href": "index.html#escrevendo-dados",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Escrevendo dados",
-    "text": "Escrevendo dados\nFeitas as alterações nos dados, para salvá-los alterados, use:\n\ndf.to_csv('xyz.csv')                      # salva DataFrame como CSV\ndf.to_excel('xyz.xlsx', sheet_name='Sheet1')\ndf.to_json('xyz.json')\n\n\n\n\n\n\n\nAviso\n\n\nO read_csv/read_excel retorna um novo DataFrame em memória: alterar df depois não muda o arquivo em disco."
+    "text": "Escrevendo dados\nFeitas as alterações nos dados, para salvá-los alterados no disco, use:\n\ndf.to_csv('xyz.csv')                      # salva DataFrame como CSV\ndf.to_excel('xyz.xlsx', sheet_name='Sheet1')\ndf.to_json('xyz.json')"
   },
   {
     "objectID": "index.html#na-prática-base-de-municípios",
@@ -81,7 +81,7 @@
     "href": "index.html#series",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Series",
-    "text": "Series\n\n“Uma Series é um objeto do tipo array unidimensional contendo uma sequência de valores (de tipos semelhantes aos tipos do NumPy) e um array associado de rótulos (labels) de dados, chamado de índice.” (McKinney, 2017, p. 186)\n\n\nobj = pd.Series([4, 7, -5, 3])\nprint(obj)\n\n0    4\n1    7\n2   -5\n3    3\ndtype: int64\n\n\n\nColuna 1: o índice (0, 1, 2…); coluna 2: os valores."
+    "text": "Series\n\n\nobj = pd.Series([4, 7, -5, 3])\nprint(obj)\n\n0    4\n1    7\n2   -5\n3    3\ndtype: int64\n\n\n\nColuna 1: o índice (0, 1, 2…); coluna 2: os valores."
   },
   {
     "objectID": "index.html#series-com-rótulos",
@@ -109,7 +109,7 @@
     "href": "index.html#criando-um-dataframe",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Criando um DataFrame",
-    "text": "Criando um DataFrame\n\npd.DataFrame({'Sim': [30, 25], 'Não': [31, 2]})\n\n\n\n\n\n\n\n\nSim\nNão\n\n\n\n\n0\n30\n31\n\n\n1\n25\n2\n\n\n\n\n\n\n\n\ndados = {'frutas': ['Manga', 'Maçã', 'Banana', 'Laranja'],\n         'quantidade': [40, 20, 25, 10],\n         'preco': [80, 100, 50, 70]}\ntype(dados)\n\ndict\n\n\n\n# convertendo de dicionário para dataframe\ndf_frutas = pd.DataFrame(dados)\nprint(df_frutas)\n\n    frutas  quantidade  preco\n0    Manga          40     80\n1     Maçã          20    100\n2   Banana          25     50\n3  Laranja          10     70\n\n\n\ndisplay(df_frutas)\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100\n\n\n2\nBanana\n25\n50\n\n\n3\nLaranja\n10\n70\n\n\n\n\n\n\n\n\ntype(df_frutas)\n\npandas.core.frame.DataFrame"
+    "text": "Criando um DataFrame\n\npd.DataFrame({'Sim': [30, 25], 'Não': [31, 2]})\n\n\n\n\n\n\n\n\nSim\nNão\n\n\n\n\n0\n30\n31\n\n\n1\n25\n2\n\n\n\n\n\n\n\nCriando datarame a partir de um objeto tipo dicionário:\n\ndados = {'frutas': ['Manga', 'Maçã', 'Banana', 'Laranja'],\n         'quantidade': [40, 20, 25, 10],\n         'preco': [80, 100, 50, 70]}\n\ntype(dados)\n\ndict\n\n\n\n# convertendo de dicionário para dataframe\ndf_frutas = pd.DataFrame(dados)\nprint(df_frutas)\n\n    frutas  quantidade  preco\n0    Manga          40     80\n1     Maçã          20    100\n2   Banana          25     50\n3  Laranja          10     70\n\n\n\ndisplay(df_frutas)\n\n\n\n\n\n\n\n\nfrutas\nquantidade\npreco\n\n\n\n\n0\nManga\n40\n80\n\n\n1\nMaçã\n20\n100\n\n\n2\nBanana\n25\n50\n\n\n3\nLaranja\n10\n70\n\n\n\n\n\n\n\nObservando o tipo:\n\ntype(df_frutas)\n\npandas.core.frame.DataFrame"
   },
   {
     "objectID": "index.html#inspecionando-o-dataframe",
@@ -263,14 +263,14 @@
     "href": "index.html#valores-únicos-e-frequências",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Valores únicos e frequências",
-    "text": "Valores únicos e frequências\n\ndf_frutas['frutas'].unique()        # lista de valores distintos\ndf_frutas['frutas'].value_counts()  # contagem de cada valor\n\nfrutas\nManga      1\nMaçã       1\nBanana     1\nLaranja    1\nName: count, dtype: int64"
+    "text": "Valores únicos e frequências\n\ndf_frutas['frutas'].unique()        # lista de valores distintos\n\narray(['Manga', 'Maçã', 'Banana', 'Laranja'], dtype=object)\n\n\n\ndf_frutas['frutas'].value_counts()  # contagem de cada valor\n\nfrutas\nManga      1\nMaçã       1\nBanana     1\nLaranja    1\nName: count, dtype: int64"
   },
   {
     "objectID": "index.html#correlação-e-covariância",
     "href": "index.html#correlação-e-covariância",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Correlação e covariância",
-    "text": "Correlação e covariância\n\ndf_frutas.corr(numeric_only=True)\ndf_frutas.cov(numeric_only=True)\n\n\n\n\n\n\n\n\nquantidade\npreco\npreco_pago\n\n\n\n\nquantidade\n156.250000\n8.333333\n1.214583e+04\n\n\npreco\n8.333333\n433.333333\n1.041667e+04\n\n\npreco_pago\n12145.833333\n10416.666667\n1.170625e+06"
+    "text": "Correlação e covariância\n\ndf_frutas.corr(numeric_only=True)\n\n\n\n\n\n\n\n\nquantidade\npreco\npreco_pago\n\n\n\n\nquantidade\n1.000000\n0.032026\n0.898066\n\n\npreco\n0.032026\n1.000000\n0.462497\n\n\npreco_pago\n0.898066\n0.462497\n1.000000\n\n\n\n\n\n\n\n\ndf_frutas.cov(numeric_only=True)\n\n\n\n\n\n\n\n\nquantidade\npreco\npreco_pago\n\n\n\n\nquantidade\n156.250000\n8.333333\n1.214583e+04\n\n\npreco\n8.333333\n433.333333\n1.041667e+04\n\n\npreco_pago\n12145.833333\n10416.666667\n1.170625e+06"
   },
   {
     "objectID": "index.html#detectando",
@@ -340,7 +340,7 @@
     "href": "index.html#na-prática---dados-da-internet",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Na prática - dados da internet",
-    "text": "Na prática - dados da internet\nDiversos órgãos públicos disponibilizam bases de dados em suas páginas de “Dados Abertos”. Jogue em buscadores como Google, Bing ou Duckduckgo “dados abertos” e o nome da organização “prefeitura de”, “governo do estado de”. Encontre a base de dados desejada.\n\n\n\n\n\n\nAviso\n\n\nBaixar os dados pela URL apenas funcionará se a URL (o endereço) seja a do o arquivo: deve terminar com a extensão do arquivo: .csv, xls."
+    "text": "Na prática - dados da internet\nDiversos órgãos públicos disponibilizam bases de dados em suas páginas de “Dados Abertos”. Jogue em buscadores como Google, Bing ou Duckduckgo “dados abertos” e o nome da organização “prefeitura de”, “governo do estado de”. Encontre a base de dados desejada.\n\n\n\n\n\n\nAviso\n\n\nBaixar os dados pela URL apenas funcionará se a URL (o endereço de internet) seja a do o arquivo: isto é, deve começar com http e deve terminar com a extensão do arquivo: .csv, xlsx, json. Geralmente os dados pũblicos são disponibilizados em formatos como json e csv."
   },
   {
     "objectID": "index.html#comparação-series-e-outros-tipos-de-estrutura-de-dados",
@@ -368,7 +368,7 @@
     "href": "index.html#baixando-a-base-de-dados-e-carregando-no-ambiente-python",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Baixando a base de dados e carregando no ambiente Python",
-    "text": "Baixando a base de dados e carregando no ambiente Python\nUtilizando o comando Linux wget para baixar os dados de sua URL terminada em .csv”: wget -O &lt;novo-nome-do-arquivo.csv&gt; &lt;URL da base de dados&gt;. -O indica o nome do arqvui de output.\n\n!wget -O vacinas_recife.csv \"https://dados.recife.pe.gov.br/dataset/71685aa9-d10f-46e0-9e5b-47c33b24644a/resource/da596cdc-a53f-4484-9856-14f0c06432e2/download/2022-perfil-das-pessoas-vacinadas-covid-19.csv\""
+    "text": "Baixando a base de dados e carregando no ambiente Python\nUtilizando o comando Linux wget para baixar os dados de sua URL terminada em .csv”: wget -O &lt;novo-nome-do-arquivo.csv&gt; &lt;URL da base de dados&gt;.\n\nwget comando para fazer o download de dados da internet.\n-O indica que passaremos o “output”, que no caso quer dizer que o próximo campo será o nome do arquivo.\n&lt;novo-nome-do-arquivo.csv&gt; o nome que queremos para o arquivo a ser baixado. Pode incluir também o diretório/pasta/ficheiro destino antes do nome. Por exemplo, se quero salvar o arquivo com o nome “vacinas_recife” dentro do diretório meus_dados, o comando fica, por enquanto, wget -O meus_dados/vacinas_recife.csv.\n&lt;URL da base de dados&gt;. A URL, o endereço de internet do arquivo. Ele deve obrigatoriamente terminar com o formato do arquivo, como csv, json, xlsx. Vejamos o exemplo abaixo:\n\n\n!wget -O vacinas_recife.csv \"https://dados.recife.pe.gov.br/dataset/71685aa9-d10f-46e0-9e5b-47c33b24644a/resource/da596cdc-a53f-4484-9856-14f0c06432e2/download/2022-perfil-das-pessoas-vacinadas-covid-19.csv\""
   },
   {
     "objectID": "index.html#na-prática-base-de-municípios-visibilityhidden",
@@ -410,7 +410,7 @@
     "href": "index.html#diferenças-principais-entre-listas-e-series-do-pandas",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Diferenças principais entre listas e series do Pandas",
-    "text": "Diferenças principais entre listas e series do Pandas\nÍndice rotulado (não apenas posicional)\n\nimport pandas as pd\n\ns = pd.Series([10, 20, 30], index=['a', 'b', 'c'])\ns['b']  # 20  → listas não fazem isso\n\nnp.int64(20)\n\n\nOperações são vetorizadas (rápidas, em C/NumPy):\n\ns * 2          # multiplica todos os elementos\n\na    20\nb    40\nc    60\ndtype: int64\n\n\n\ns[s &gt; 15]      # filtro booleano\n\nb    20\nc    30\ndtype: int64\n\n\nEm Python tradicional, utilizando lista ao invés de serie, para assim:\n\nnumeros = [10, 20, 30]\n\n#  repetição, não multiplicação!\nnumeros * 2 \n\n[10, 20, 30, 10, 20, 30]\n\n\n\nresultado = []\nfor numero in numeros:\n  resultado.append(numero * 2)\n\nprint(resultado)\n\n[20, 40, 60]\n\n\n\n# opção 2, com função lambda \nlist(map(lambda x: x * 2, numeros))\n\n[20, 40, 60]\n\n\nAlinhamento automático em operações\n\ns1 = pd.Series([1,2,3], index=['a','b','c'])\ns2 = pd.Series([10,20,30], index=['b','c','d'])\ns1 + s2   # alinha pelos índices, gera NaN onde não há correspondência\n\na     NaN\nb    12.0\nc    23.0\nd     NaN\ndtype: float64"
+    "text": "Diferenças principais entre listas e series do Pandas\nÍndice rotulado (não apenas posicional)\n\nimport pandas as pd\n\ns = pd.Series([10, 20, 30], index=['a', 'b', 'c'])\ns['b']  # 20  → listas não fazem isso\n\nnp.int64(20)\n\n\nOperações são vetorizadas (rápidas, em C/NumPy):\n\ns * 2          # multiplica todos os elementos\n\na    20\nb    40\nc    60\ndtype: int64\n\n\n\ns[s &gt; 15]      # filtro booleano\n\nb    20\nc    30\ndtype: int64\n\n\nApenas para efitos de comparacao, em Python tradicional, sem usar Pandas, utilizando lista ao invés de serie, ficaria assim a multiplicação:\n\n# lista, sem utiliar series\nnumeros = [10, 20, 30]\n\n#  resulta em repetição, não multiplicação!\nnumeros * 2 \n\n[10, 20, 30, 10, 20, 30]\n\n\nIterando nos itens da lista, isto ẽ, aplicando a multiplicação a todos os elementos da lista números:\n\nresultado = []\nfor numero in numeros:\n  resultado.append(numero * 2)\n\nprint(resultado)\n\n[20, 40, 60]\n\n\n\n# opção 2, com função lambda \nlist(map(lambda x: x * 2, numeros))\n\n[20, 40, 60]\n\n\nAlinhamento automático em operações\nOutra vantagem do series é que alinha a operação pelo index. Assim se você tem diferentes series (e, por consequência, dataframes também) que possuem nomes/chaves, ele fará a operação assegurando que aplica aos mesmos indivíduos.\n\ns1 = pd.Series([1,2,3], index=['a','b','c'])\ns2 = pd.Series([10,20,30], index=['b','c','d'])\ns1 + s2   # alinha pelos índices, gera NaN onde não há correspondência\n\na     NaN\nb    12.0\nc    23.0\nd     NaN\ndtype: float64"
   },
   {
     "objectID": "index.html#config-no-google-drive",
@@ -424,28 +424,28 @@
     "href": "index.html#criar-um-novo-diretóriopastaficheiro",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "2) Criar um novo diretório/pasta/ficheiro",
-    "text": "2) Criar um novo diretório/pasta/ficheiro\nNo Google Drive, você pode criar pastas e arquivos de duas formas:\nPela interface web:\n\nAcesse drive.google.com\nClique em “+ Novo” → “Pasta” (ou “Nova pasta”) para criar um diretório\nPara criar um arquivo, clique em “+ Novo” → escolha o tipo (Documentos, Planilhas, etc.)"
+    "text": "2) Criar um novo diretório/pasta/ficheiro\nPela interface web:\n\nAcesse drive.google.com\nClique em “+ Novo” → “Pasta” (ou “Nova pasta”) para criar um diretório\nO nosso vamos chamar fundaj_pandas, mas você pode dar o nome que quiser."
   },
   {
     "objectID": "index.html#subir-arquivo-upload-no-google-drive",
     "href": "index.html#subir-arquivo-upload-no-google-drive",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "3) Subir arquivo (upload) no Google Drive",
-    "text": "3) Subir arquivo (upload) no Google Drive"
+    "text": "3) Subir arquivo (upload) no Google Drive\nEscolha os arquivos .csv xlsx e faça o upload para o diretório que acabou de criar."
   },
   {
     "objectID": "index.html#conectando-drive-ao-colab",
     "href": "index.html#conectando-drive-ao-colab",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
-    "section": "4) conectando Drive ao Colab",
-    "text": "4) conectando Drive ao Colab\n\nfrom google.colab import drive\n# em qual pasta ele vai montar o drive:\ndrive.mount('/content/drive')\n\nRode a célula acima.\nAbrirá uma janela perguntando se você permite o acesso:\n\n\n\ncolab drive\n\n\n\nClique em “Conectar ao Google Drive” (ou “Permitir”).\nOutra janela se abrirá. Escolha a conta Google desejada\nRevise as permissões e clique em “Permitir”\n\n\n\n\nacesso 2"
+    "section": "4) Conectando Drive ao Colab",
+    "text": "4) Conectando Drive ao Colab\n\nfrom google.colab import drive\n# em qual pasta ele vai montar o drive:\ndrive.mount('/content/drive')\n\nRode a célula acima.\nAbrirá uma janela perguntando se você permite o acesso:\n\n\n\ncolab drive\n\n\n\nClique em “Conectar ao Google Drive” (ou “Permitir”).\nOutra janela se abrirá. Escolha a conta Google desejada\nRevise as permissões e clique em “Permitir”\n\n\n\n\nacesso 2"
   },
   {
     "objectID": "index.html#verificando-o-acesso",
     "href": "index.html#verificando-o-acesso",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Verificando o acesso",
-    "text": "Verificando o acesso\n\n# Listar o conteúdo do Drive\n!ls /content/drive/MyDrive"
+    "text": "Verificando o acesso\nSe surgir a pasta drive no seu Colab, então a o Google Drive foi conectado com sucesso ao Colab. Nesta pasta está todo seu Google Drive.\n\n# Listar o conteúdo do Drive\n!ls /content/drive/MyDrive\n\n\n# Listar o conteúdo do Drive da pasta que criamos \n!ls /content/drive/MyDrive/fundaj_pandas"
   },
   {
     "objectID": "index.html#observações-importantes",
