@@ -256,7 +256,7 @@
     "href": "index.html#estatísticas-por-coluna",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Estatísticas por coluna",
-    "text": "Estatísticas por coluna\n\ndf_frutas['preco'].sum()  # soma\ndf_frutas['preco'].mean()  # média\ndf_frutas['preco'].median()  # mediana\ndf_frutas['preco'].var()  # variância\ndf_frutas['preco'].std()  # desvio-padrão / standard deviation\ndf_frutas['preco'].quantile([0.25, 0.75])  # quartis\n\n0.25    65.0\n0.75    85.0\nName: preco, dtype: float64\n\n\n\ndf_frutas['preco'].cumsum()  # soma acumulada\n\n0     80\n1    180\n2    230\n3    300\nName: preco, dtype: int64"
+    "text": "Estatísticas por coluna\n\ndf_frutas['preco'].sum()  # soma\n\nnp.int64(300)\n\n\n\ndf_frutas['preco'].mean()  # média\n\nnp.float64(75.0)\n\n\n\ndf_frutas['preco'].median()  # mediana\n\nnp.float64(75.0)\n\n\n\ndf_frutas['preco'].var()  # variância\n\nnp.float64(433.3333333333333)\n\n\n\ndf_frutas['preco'].std()  # desvio-padrão / standard deviation\n\nnp.float64(20.816659994661325)\n\n\n\ndf_frutas['preco'].quantile([0.25, 0.75])  # quartis\n\n0.25    65.0\n0.75    85.0\nName: preco, dtype: float64\n\n\n\ndf_frutas['preco'].cumsum()  # soma acumulada\n\n0     80\n1    180\n2    230\n3    300\nName: preco, dtype: int64"
   },
   {
     "objectID": "index.html#valores-únicos-e-frequências",
@@ -298,7 +298,7 @@
     "href": "index.html#gráficos-com-o-próprio-dataframe",
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "Gráficos com o próprio DataFrame",
-    "text": "Gráficos com o próprio DataFrame\n\ndf_frutas.plot.bar(x='frutas', y=['quantidade', 'preco'])   # barras\ndf_frutas['quantidade'].plot.hist(bins=3)                   # histograma\ndf_frutas.plot.scatter(x='preco', y='preco_pago')         # dispersão\ndf_frutas.boxplot(column='preco', grid=False)             # box-plot (outliers)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngrouped = df_frutas.groupby('frutas').sum()\ngrouped.plot.pie(y='quantidade', subplots=True)\n\narray([&lt;Axes: ylabel='quantidade'&gt;], dtype=object)"
+    "text": "Gráficos com o próprio DataFrame\n\ndf_frutas.plot.bar(x='frutas', y=['quantidade', 'preco'])   # barras\ndf_frutas['quantidade'].plot.hist(bins=3)                   # histograma\ndf_frutas.plot.scatter(x='preco', y='preco_pago')         # dispersão\ndf_frutas.boxplot(column='preco', grid=False)             # box-plot (outliers)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# barras\ndf_frutas.plot.bar(x='frutas', y=['quantidade', 'preco'])   \n\n\n\n\n\n\n\n\n\n# histograma\ndf_frutas['quantidade'].plot.hist(bins=3)                   \n\n\n\n\n\n\n\n\n\n# dispersão\ndf_frutas.plot.scatter(x='preco', y='preco_pago')         \n\n\n\n\n\n\n\n\n\n# box-plot (outliers)\ndf_frutas.boxplot(column='preco', grid=False)             \n\n\n\n\n\n\n\n\n\ngrouped = df_frutas.groupby('frutas').sum()\ngrouped.plot.pie(y='quantidade', subplots=True)\n\narray([&lt;Axes: ylabel='quantidade'&gt;], dtype=object)"
   },
   {
     "objectID": "index.html#por-que-um-apêndice-sobre-classes",
@@ -481,5 +481,40 @@
     "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
     "section": "filtrar linhas com variavel",
     "text": "filtrar linhas com variavel\n\nvacinas = df_vacinas['vacina_fabricante'].unique()\nvacina_escolhida = vacinas[0]\nvacina_escolhida\n\n'3 - COMIRNATY (PFIZER)'\n\n\n\ndf_vacinas[df_vacinas['vacina_fabricante'] == vacina_escolhida]\n\n\n\n\n\n\n\n\nfaixa_etaria\nidade\nsexo\nraca_cor\nmunicipio\ngrupo\ncategoria\nlote\nvacina_fabricante\ndescricao_dose\ncnes\nsistema_origem\ndata_vacinacao\n\n\n\n\n0\n35 a 39 anos\n36.0\nFEMININO\nPARDA\nRECIFE\nTRABALHADORES DA SAÚDE\nNaN\nFM2951\n3 - COMIRNATY (PFIZER)\n3\nDS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BA...\nConecta Recife\n2022-01-24 00:00:00.0\n\n\n1\n35 a 39 anos\n37.0\nMASCULINO\nBRANCA\nRECIFE\nPESSOAS COM COMORBIDADES\nPESSOAS COM OBESIDADE MÓRBIDA (IMC &gt; OU = 40)\nFK8911\n3 - COMIRNATY (PFIZER)\n3\nDS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO\nConecta Recife\n2022-01-11 00:00:00.0\n\n\n2\n20 a 24 anos\n20.0\nMASCULINO\nBRANCA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nNaN\nFL4222\n3 - COMIRNATY (PFIZER)\n3\nDS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO\nConecta Recife\n2022-01-08 00:00:00.0\n\n\n4\n25 a 29 anos\n26.0\nFEMININO\nBRANCA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nNaN\nFM2967\n3 - COMIRNATY (PFIZER)\n3\nDS 7: CNES: 0000647 - POLICLINICA CLEMENTINO F...\nConecta Recife\n2022-02-01 00:00:00.0\n\n\n5\n30 a 34 anos\n31.0\nFEMININO\nPARDA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nNaN\nFM2967\n3 - COMIRNATY (PFIZER)\n3\nDS 6: CNES: 0001392 - MIGUEL DE LIMA VALVERDE.\nConecta Recife\n2022-02-02 00:00:00.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n1466336\n35 a 39 anos\n35.0\nMASCULINO\nPARDA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nOUTRAS\nFM2951\n3 - COMIRNATY (PFIZER)\n3\nDS 5: CNES: 000701 - MATERNIDADE BANDEIRA FILHO\nConecta Recife\n2022-01-18 00:00:00.0\n\n\n1466337\n35 a 39 anos\n37.0\nMASCULINO\nPRETA\nRECIFE\nPESSOAS COM COMORBIDADES\nPESSOAS VIVENDO COM HIV\nFL4222\n3 - COMIRNATY (PFIZER)\n3\nDS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER\nConecta Recife\n2022-01-07 00:00:00.0\n\n\n1466339\n35 a 39 anos\n36.0\nFEMININO\nPARDA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nOUTRAS\nFM2951\n3 - COMIRNATY (PFIZER)\n2\nDS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER\nConecta Recife\n2022-01-25 00:00:00.0\n\n\n1466341\n35 a 39 anos\n35.0\nFEMININO\nBRANCA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nOUTRAS\nFL4222\n3 - COMIRNATY (PFIZER)\n3\nDS 1: CNES: 000507 - POLICLÍNICA GOUVEIA DE BA...\nConecta Recife\n2022-01-08 00:00:00.0\n\n\n1466342\n45 a 49 anos\n45.0\nMASCULINO\nBRANCA\nRECIFE\nPÚBLICO EM GERAL (18 a 59 anos)\nNaN\nFL4222\n3 - COMIRNATY (PFIZER)\n3\nDS 2: CNES: 6897029 - POLICLÍNICA SALOMÃO KELNER\nConecta Recife\n2022-01-07 00:00:00.0\n\n\n\n\n440468 rows × 13 columns"
+  },
+  {
+    "objectID": "index.html#gráfico-de-barras",
+    "href": "index.html#gráfico-de-barras",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
+    "section": "Gráfico de barras",
+    "text": "Gráfico de barras\n\n# barras\ndf_frutas.plot.bar(x='frutas', y=['quantidade', 'preco'])"
+  },
+  {
+    "objectID": "index.html#gráfico-histograma",
+    "href": "index.html#gráfico-histograma",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
+    "section": "Gráfico: histograma",
+    "text": "Gráfico: histograma\n\n# histograma\ndf_frutas['quantidade'].plot.hist(bins=3)"
+  },
+  {
+    "objectID": "index.html#gráfico-gráfico-de-dispersão",
+    "href": "index.html#gráfico-gráfico-de-dispersão",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
+    "section": "Gráfico: gráfico de dispersão",
+    "text": "Gráfico: gráfico de dispersão\n\n# dispersão\ndf_frutas.plot.scatter(x='preco', y='preco_pago')"
+  },
+  {
+    "objectID": "index.html#gráfico-boxplot",
+    "href": "index.html#gráfico-boxplot",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
+    "section": "Gráfico: boxplot",
+    "text": "Gráfico: boxplot\n\n# box-plot (outliers)\ndf_frutas.boxplot(column='preco', grid=False)"
+  },
+  {
+    "objectID": "index.html#gráfico-pizza-pie",
+    "href": "index.html#gráfico-pizza-pie",
+    "title": "Introdução à Análise de Dados com Python — Primeiros passos com o pacote Pandas",
+    "section": "Gráfico: pizza (pie)",
+    "text": "Gráfico: pizza (pie)\n\ngrouped = df_frutas.groupby('frutas').sum()\ngrouped.plot.pie(y='quantidade', subplots=True)\n\narray([&lt;Axes: ylabel='quantidade'&gt;], dtype=object)"
   }
 ]
